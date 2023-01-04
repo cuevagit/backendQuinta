@@ -56,16 +56,12 @@ class Container{
 
             const snapshot = await this.coleccion.where("_id", "=", id).get()
 
-            if(!snapshot){
+            if(snapshot.empty){
                 return null
             }else{
-                const resultado = []
-                snapshot.forEach(doc => {
-                    resultado.push({_id: doc.id, ...doc.data() })
-                })
-                return resultado;
+                return snapshot.docs[0].data();
             }
-            
+          
         }
 
         catch(error){
@@ -110,9 +106,9 @@ class Container{
             const objetoBorrado = await this.getById(id)
             const id_documento = await this.nombreDocumento(id)
 
-         if(objetoBorrado[0]){ 
+         if(objetoBorrado){ 
             await this.coleccion.doc(id_documento).delete()
-            return objetoBorrado[0]
+            return objetoBorrado
           } else {
             return null
           }
@@ -130,7 +126,7 @@ class Container{
 
         try {
             const id_documento = await this.nombreDocumento(objeto._id)
-            await this.coleccion.doc(id_documento).update({name: objeto.name, description: objeto.description, price: objeto.price, imageurl: objeto.imageurl})
+            await this.coleccion.doc(id_documento).update(objeto)
             return objeto;
         }
        catch(error){
@@ -174,8 +170,8 @@ class Container{
             this.cart = await this.getAll()
             const id_documento = await this.nombreDocumento(this.cart[indice_cart]._id)
             const eliminado = this.cart[indice_cart].productos.splice(indice_prod, 1)
-            await this.coleccion.doc(id_documento).update({productos: this.cart[indice_cart]})
-            return eliminado
+            await this.coleccion.doc(id_documento).update({productos: this.cart[indice_cart].productos})
+            return eliminado[0]
         }
         catch(error){
             error => { throw error}

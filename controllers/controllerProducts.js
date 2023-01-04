@@ -71,7 +71,7 @@ async function controladorPutProductosSegunId({ body, params: { id } }, res) {
 async function controladorDeleteProductosSegunId({ params: { id } }, res) {
     const productos = await prodTest.deleteById(id);
 
-    if (productos === -1) {
+    if (!productos) {
         res.status(404);
         res.json({ mensaje: `no se encontró producto con ese id (${id})` });
     } else {

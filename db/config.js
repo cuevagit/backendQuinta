@@ -26,8 +26,8 @@ export const DB_NAME = 'ecommerce'
 
 //export const PERSISTENCIA = 'fs'
 //export const PERSISTENCIA = 'mongodb'
-//export const PERSISTENCIA = 'firebase'
-export const PERSISTENCIA = 'mysql'
+export const PERSISTENCIA = 'firebase'
+//export const PERSISTENCIA = 'mysql'
 //export const PERSISTENCIA = 'sqlite'
 
 console.log("Estoy conectado con: " + PERSISTENCIA)

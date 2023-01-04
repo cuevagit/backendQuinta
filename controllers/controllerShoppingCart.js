@@ -127,31 +127,26 @@ async function controladorDeleteItemsSegunIdProducts({ params: { id_cart }, para
          indiceBuscadoProd = Prods.findIndex(p => p._id === id_prod);
       }
     else { 
-         indiceBuscadoProd = Items[indiceBuscadoCart].productos.findIndex(p => p._id === id_prod);
-    }
+        if (indiceBuscadoCart === -1) { 
+            res.status(404);
+            res.json({ mensaje: `no se encontró carrito con ese id (${id_cart})` });
+        }
+        else {
+            indiceBuscadoProd = Items[indiceBuscadoCart].productos.findIndex(p => p._id === id_prod);
 
-    if (indiceBuscadoCart === -1) {
-        res.status(404);
-        res.json({ mensaje: `no se encontró carrito con ese id (${id_cart})` });
-
-        if (indiceBuscadoProd === -1) {
-            res.json({ mensaje: `no se encontró producto con ese id (${id_prod})` });        
-        }    
-
-    } else {
-      if (indiceBuscadoProd === -1) {
-        res.status(404);
-        res.json({ mensaje: `no se encontró producto con ese id (${id_prod}), en el carrito con id (${id_cart}` });
-      } else {
-        let borrados
-        if(PERSISTENCIA === "mysql"  || PERSISTENCIA === "sqlite")
-             borrados = await cartTest.deleteByIdProd(id_cart, id_prod);
-        else
-             borrados = await cartTest.deleteByIdProd(indiceBuscadoCart, indiceBuscadoProd);
-        res.json(borrados);
-      }
-    }
-
+            if (indiceBuscadoProd === -1) {
+                res.json({ mensaje: `no se encontró producto con ese id (${id_prod}) , en el carrito con id (${id_cart}` });        
+             } else {
+                let borrados
+                if(PERSISTENCIA === "mysql"  || PERSISTENCIA === "sqlite")
+                     borrados = await cartTest.deleteByIdProd(id_cart, id_prod);
+                else
+                     borrados = await cartTest.deleteByIdProd(indiceBuscadoCart, indiceBuscadoProd);
+                res.json(borrados);
+             }   
+           }
+        }
+    
 }
 
 
