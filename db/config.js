@@ -35,4 +35,4 @@ export const DB_NAME = DBNAME
 
 export const PERSISTENCIA = PERSISTENCIAELEGIDA
 
-loggerInfo("Estoy conectado con: " + PERSISTENCIA)
+loggerInfo("Estoy conectado con: " + PERSISTENCIA) 
