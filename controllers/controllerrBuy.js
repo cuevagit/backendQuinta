@@ -43,7 +43,7 @@ const orders = new ContainerMongoDB('orders')
          const fecha = f.getDate() + "/" + (f.getMonth() +1) + "/" + f.getFullYear();
       
          const order = {
-          buyer: { usuario: usuario.username, apellido: usuario.apellido, foto: usuario.foto},
+          buyer: { usuario: usuario.username, apellido: usuario.apellido, nombre: usuario.nombre, foto: usuario.foto},
           items: { productos: prodcutsCart.productos, fecha}
          }
 
