@@ -1,55 +1,41 @@
-import { clienteSql as knex } from './clienteSql.js'
-//import { clienteSqlLite3 as knex } from './clienteSql.js'
+//import { clienteSql as knex } from './clienteSql.js'
+import { clienteSqlLite3 as knex } from './clienteSql.js'
+import loggerInfo from '../pinoInfo.js';
+import loggerWarn from '../pinoWarn.js';
 
-
-function createTables(){
-knex.schema.hasTable('productos')
+async function createTables(){
+await knex.schema.hasTable('productos')
     .then(exists => {
         if (!exists) {
             knex.schema.createTable('productos', tabla => {
-                tabla.string('_id'),
-                    tabla.string('name'),
-                    tabla.string('description'),
-                    tabla.string('image(url)'),
-                    tabla.integer('price')
+                tabla.increments('id'),
+                    tabla.string('title'),
+                    tabla.integer('price'),
+                    tabla.string('thumbnail')
             })
                 .then(() => {
-                    console.log('tabla "productos" creada!')
+                    loggerInfo('tabla "productos" creada!')
                 })
         } else {
-            console.log('la tabla "productos" ya existe. no se realizaron cambios')
+            loggerWarn('la tabla "productos" ya existe. no se realizaron cambios')
         }
-    })
+    }),
   
 
-    knex.schema.hasTable('cart')
+   await knex.schema.hasTable('chat')
     .then(exists => {
         if (!exists) {
-            knex.schema.createTable('cart', tabla => {
-                tabla.string('_id'),
-                tabla.string('user')
+            knex.schema.createTable('chat', tabla => {
+                tabla.increments('id'),
+                    tabla.string('fecha'),
+                    tabla.string('email'),
+                    tabla.string('mensaje')
             })
                 .then(() => {
-                    console.log('tabla "cart" creada!')
+                    loggerInfo('tabla "chat" creada!')
                 })
         } else {
-            console.log('la tabla "cart" ya existe. no se realizaron cambios')
-        }
-    })
-
-    knex.schema.hasTable('cartProds')
-    .then(exists => {
-        if (!exists) {
-            knex.schema.createTable('cartProds', tabla => {
-                tabla.increments('_id'),
-                tabla.string('_idCart'),
-                tabla.string('_idPRod')
-            })
-                .then(() => {
-                    console.log('tabla "cartProds" creada!')
-                })
-        } else {
-            console.log('la tabla "cartProds" ya existe. no se realizaron cambios')
+            loggerWarn('la tabla "chat" ya existe. no se realizaron cambios')
         }
     })
 

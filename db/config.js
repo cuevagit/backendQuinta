@@ -1,7 +1,10 @@
 import fs from 'fs';
+import {MONGOCONECTION} from '../config.js'
+import loggerInfo from '../pinoInfo.js';
+
 
 //MongoDB
-export const CNX_STR = 'mongodb+srv://root:12345@cluster0.mqhwyzp.mongodb.net/test'
+export const CNX_STR = MONGOCONECTION
 
 //FireStore
 export const serviceAccount = JSON.parse(await fs.promises.readFile('./db/ecommerce-edf6f-firebase-adminsdk-at3mn-33e510bb7e.json', 'utf-8'));
@@ -25,9 +28,9 @@ export const user = 'root'
 export const DB_NAME = 'ecommerce'
 
 //export const PERSISTENCIA = 'fs'
-//export const PERSISTENCIA = 'mongodb'
-export const PERSISTENCIA = 'firebase'
+export const PERSISTENCIA = 'mongodb'
+//export const PERSISTENCIA = 'firebase'
 //export const PERSISTENCIA = 'mysql'
 //export const PERSISTENCIA = 'sqlite'
 
-console.log("Estoy conectado con: " + PERSISTENCIA)
+loggerInfo("Estoy conectado con: " + PERSISTENCIA)

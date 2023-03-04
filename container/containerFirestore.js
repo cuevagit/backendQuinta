@@ -18,7 +18,7 @@ class Container{
             return { ...objeto, _id: ref.id }
         } 
         catch (error){
-            error => { throw error}
+            return error
         } 
 
       }
@@ -44,7 +44,7 @@ class Container{
         }
 
         catch(error){
-            error => { throw error}
+            return error
         } 
 
      }
@@ -65,7 +65,7 @@ class Container{
         }
 
         catch(error){
-            error => { throw error}
+            return error
         } 
 
      }
@@ -94,7 +94,7 @@ class Container{
         }
 
         catch(error){
-            error => { throw error}
+            return error
         } 
 
     }
@@ -115,7 +115,7 @@ class Container{
         }
 
         catch(error){
-            error => { throw error}
+            return error
         } 
 
     }
@@ -130,7 +130,7 @@ class Container{
             return objeto;
         }
        catch(error){
-            error => { throw error}
+             return error
         } 
     }
 
@@ -144,7 +144,7 @@ class Container{
             return objeto;
         }
         catch(error){
-            error => { throw error }
+            return error
         } 
     }
 
@@ -158,7 +158,7 @@ class Container{
             return carritoVaciado
         }
         catch(error){
-            error => { throw error}
+            return error
         } 
     }
 
@@ -174,7 +174,7 @@ class Container{
             return eliminado[0]
         }
         catch(error){
-            error => { throw error}
+            return error
         } 
     }
 

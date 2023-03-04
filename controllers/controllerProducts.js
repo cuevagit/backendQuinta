@@ -6,6 +6,11 @@ import ContainerFirestore from '../container/containerFirestore.js'
 import ContainerBDRelacional from '../container/containerBDRelacionalProd.js'
 import { clienteSql } from '../db/clienteSql.js';
 import { clienteSqlLite3 } from '../db/clienteSql.js';
+import ContainerUser from '../container/containerUser.js'
+import loggerError from '../pinoError.js';
+import loggerWarn from '../pinoWarn.js';
+
+const users = new ContainerUser('users')
 
 let prodTest
 
@@ -27,30 +32,47 @@ switch (PERSISTENCIA) {
 }
 
 
+//prodTest = new Container('productos.txt')
+
 
 async function controladorPostProductos(req, res) {
     res.status(201);
     const objeto = req.body;
     objeto._id = randomUUID();
-    await prodTest.save(objeto);
-    res.json(objeto)
+    const resul = await prodTest.save(objeto);
+    if(resul.message)
+     loggerError(resul.message)
+    else
+     res.json(objeto)
 }
 
 async function controladorGetProductos(req, res) {
     const productos = await prodTest.getAll();
-    res.json(productos);
+    if(productos)
+      if(productos.message)
+      loggerError(productos.message)
+      else
+      res.json(productos);
+    else 
+      res.json({"mensaje": "No hay producrtos"})
 }
 
 async function controladorGetProductosSegunId({ params: { id } }, res) {
     const productos = await prodTest.getById(id);
 
-    if (!productos) {
-        res.status(404);
-        res.json({ mensaje: `no se encontró producto con ese id (${id})` });
-    } else {
-        res.json(productos);
+        if (!productos) {
+            res.status(404);
+            loggerWarn(`no se encontró producto con ese id (${id})`)
+            res.json({ mensaje: `no se encontró producto con ese id (${id})` });
+        } else {    
+            if(productos.message)
+            loggerError(productos.message)
+           else {
+            res.json(productos);
+        }
     }
 }
+
 
 async function controladorPutProductosSegunId({ body, params: { id } }, res) {
 
@@ -58,12 +80,17 @@ async function controladorPutProductosSegunId({ body, params: { id } }, res) {
 
     if (!productos) {
         res.status(404);
+        loggerWarn(`no se encontró producto con ese id (${id})`)
         res.json({ mensaje: `no se encontró producto con ese id (${id})` });
     } else {
+        if(productos.message)
+        loggerError(productos.message)
+       else {
         body._id = id;
         await prodTest.update(body);
         res.json(body);
     }
+  }
 
 }
 
@@ -73,21 +100,36 @@ async function controladorDeleteProductosSegunId({ params: { id } }, res) {
 
     if (!productos) {
         res.status(404);
+        loggerWarn(`no se encontró producto con ese id (${id})`)
         res.json({ mensaje: `no se encontró producto con ese id (${id})` });
     } else {
+        if(productos.message)
+        loggerError(productos.message)
+       else {
         res.json(productos);
     }
+   }
 }
 
-let administrador = true
+//let administrador = true
 
-function soloParaAdmins(req, res, next) {
-    if (administrador) {
+async function soloParaAdmins(req, res, next) {
+
+    const esAdmin = await users.esAdmin(req.session.user)
+
+  if(esAdmin.message) 
+   loggerError(esAdmin.message)
+  else {
+    if (req.session.user && await esAdmin) {
         next()
     } else {
+        loggerWarn("error: 403, descripcion:  ruta " + req.originalUrl + " método " + req.method + " no autorizada")
         res.status(403).json({error: "403", descripcion:  "ruta " + req.originalUrl + " método " + req.method + " no autorizada"})
     }
+  }
+
 }
+
 
 
 export  {controladorGetProductos, controladorPostProductos, controladorGetProductosSegunId, controladorPutProductosSegunId,

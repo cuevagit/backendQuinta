@@ -21,7 +21,7 @@ class Contenedor{
             return data[0]
         }
        catch(error){
-            error => { throw error}
+            return error
         } 
 
       }
@@ -41,7 +41,7 @@ class Contenedor{
         }
 
         catch(error){
-            error => { throw error}
+            return error
         } 
 
      }
@@ -60,7 +60,7 @@ class Contenedor{
             }
     
         catch(error){
-            error => { throw error}
+            return error
         } 
     
     }
@@ -78,7 +78,7 @@ class Contenedor{
           }
         }
        catch(error){
-            error => { throw error}
+            return error
         } 
     }
 
@@ -94,7 +94,7 @@ class Contenedor{
          
         }
         catch(error){
-            error => { throw error}
+            return error
         } 
     }
     

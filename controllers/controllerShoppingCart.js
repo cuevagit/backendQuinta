@@ -8,6 +8,8 @@ import ContainerBDRelacionalProd from '../container/containerBDRelacionalProd.js
 import ContainerBDRelacionalCart from '../container/containerBDRelacionalCart.js'
 import { clienteSql } from '../db/clienteSql.js';
 import { clienteSqlLite3 } from '../db/clienteSql.js';
+import loggerError from '../pinoError.js';
+import loggerWarn from '../pinoWarn.js';
 
 let prodTest
 let cartTest
@@ -36,120 +38,187 @@ switch (PERSISTENCIA) {
 }
 
 
-async function controladorPostItems(req, res) {
-    res.status(201);
-    const objeto = req.body;
-    const productos = []
-    objeto._id = randomUUID();
-    objeto.productos = productos
-
-    if(PERSISTENCIA === "mysql"  || PERSISTENCIA === "sqlite")
-     await cartTest.save({_id: objeto._id, user: user});
-    else
-     await cartTest.save(objeto);
-
-    res.json({id: objeto._id})
-}
-
-async function controladorPostItemProducts({ body, params: { id_cart } }, res) {
+async function controladorPostItemProducts(req, res) {
     const Items = await cartTest.getAll();
     const Prods = await prodTest.getAll();
 
-    const indiceProducto = Prods.findIndex(p => p._id === body._id);
+    if(Items.message) 
+      loggerError(Items.message)
+    else {
+      if(Prods.message) 
+       loggerError(Prods.message)
+      else {
+        const indiceProducto = Prods.findIndex(p => p._id === req.body._id);
 
-    if (indiceProducto === -1) {
-        res.status(404);
-        res.json({ mensaje: `no se encontró producto con ese id (${body._id})` });
-    } else {
-        body = Prods[indiceProducto]
+        if (indiceProducto === -1) {
+            res.status(404);
+            loggerWarn(`no se encontró producto con ese id (${req.body._id})`)
+            res.json({ mensaje: `no se encontró producto con ese id (${req.body._id})` });
+        } else {
+            req.body = Prods[indiceProducto]
+    
+    
+       if(req.session.user){ 
+        
+        const indiceBuscado = Items.findIndex(c => c.usuario === req.session.user);
+    
+            if (indiceBuscado === -1) {
+                res.status(404);
+                loggerWarn(`no se encontró carrito para el usuario (${req.session.user})`)
+                res.json({ mensaje: `no se encontró carrito para el usuario (${req.session.user})` });
+            } else {
+              if(PERSISTENCIA === "mysql"  || PERSISTENCIA === "sqlite"){
+                const id_cart = prodTest.buscarIdCart(req.session.user)
+                if(id_cart.message) 
+                   loggerError(id_cart.message)
+                else {
+                    const objeto = {_idCart: id_cart, _idPRod: req.body._id }
+                    const insertado = await cartTest.save_products(objeto);
+                    if(insertado.message)
+                     loggerError(insertado.message)
+                    else
+                     res.json(insertado)
+                }
+
+              }
+              else {
+                Items[indiceBuscado].productos.push(req.body);
+                const resul = await cartTest.save_products(Items[indiceBuscado]);
+                if(resul.message)
+                 loggerError(resul.message)
+                else
+                 res.json(req.body);
+              }
+            }
+         } else {
+            loggerWarn("No hay usuario logueado")
+            res.json({"mensaje": "No hay usuario logueado"})
+         }
+        }
+    }
+
+      }
+
+}
 
 
-        const indiceBuscado = Items.findIndex(c => c._id === id_cart);
+async function controladorGetItemsSegunId(req, res) {
+    const Items = await cartTest.getById(req.session.user);
+
+if(Items.message) 
+ loggerError(Items.message)
+else {
+    if(req.session.user) {
+        if (!Items) {
+            res.status(404);
+            loggerWarn(`no se encontró carrito para el usuario (${req.session.user})`)
+            res.json({ mensaje: `no se encontró carrito para el usuario (${req.session.user})` });
+        } else {
+            res.json(Items);
+        }
+     } else {
+        loggerWarn("No hay usuario logueado")
+        res.json({"mensaje": "No hay usuario logueado"})
+     }
+
+ }
+}
 
 
+
+async function controladorDeleteItemsSegunId(req, res) {
+    const Items = await cartTest.getAll();
+
+if(Items.message) 
+ loggerError(Items.message)
+else {
+    if(req.session.user) {
+
+        const indiceBuscado = Items.findIndex(c => c.usuario === req.session.user);
+        const borrados = Items[indiceBuscado]
+    
         if (indiceBuscado === -1) {
             res.status(404);
-            res.json({ mensaje: `no se encontró carrito con ese id (${id_cart})` });
+            loggerWarn(`no se encontró carrito para el usuario (${req.session.user})`)
+            res.json({ mensaje: `no se encontró carrito para el usuario (${req.session.user})` });
         } else {
-          if(PERSISTENCIA === "mysql"  || PERSISTENCIA === "sqlite"){
-            const objeto = {_idCart: id_cart, _idPRod: body._id }
-            const insertado = await cartTest.save_products(objeto);
-            res.json(insertado)
-          }
-          else {
-            Items[indiceBuscado].productos.push(body);
-            await cartTest.save_products(Items[indiceBuscado]);
-            res.json(body);
-          }
-
+            const resul = await cartTest.deleteByIdCart(req.session.user);
+            if(resul.message)
+             loggerError(resul.message)
+            else
+             res.json(borrados);
         }
+     }  else {
+        loggerWarn("No hay usuario logueado")
+        res.json({"mensaje": "No hay usuario logueado"})
+     }
+}
 
-    }
 }
 
 
-async function controladorGetItemsSegunId({ params: { id_cart } }, res) {
-    const Items = await cartTest.getById(id_cart);
-
-    if (!Items) {
-        res.status(404);
-        res.json({ mensaje: `no se encontró carrito con ese id (${id_cart})` });
-    } else {
-        res.json(Items);
-    }
-}
-
-
-
-async function controladorDeleteItemsSegunId({ params: { id_cart } }, res) {
-    const Items = await cartTest.getAll();
-    const indiceBuscado = Items.findIndex(c => c._id === id_cart);
-    const borrados = Items[indiceBuscado]
-
-    if (indiceBuscado === -1) {
-        res.status(404);
-        res.json({ mensaje: `no se encontró carrito con ese id (${id_cart})` });
-    } else {
-        await cartTest.deleteByIdCart(id_cart);
-        res.json(borrados);
-    }
-}
-
-async function controladorDeleteItemsSegunIdProducts({ params: { id_cart }, params: { id_prod } }, res) {
+async function controladorDeleteItemsSegunIdProducts(req, res) {
     const Items = await cartTest.getAll();
     const Prods = await prodTest.getAll();
 
 
-    const indiceBuscadoCart = Items.findIndex(c => c._id === id_cart);
-
-    let indiceBuscadoProd
-    if(PERSISTENCIA === "mysql"  || PERSISTENCIA === "sqlite"){
-         indiceBuscadoProd = Prods.findIndex(p => p._id === id_prod);
-      }
-    else { 
-        if (indiceBuscadoCart === -1) { 
-            res.status(404);
-            res.json({ mensaje: `no se encontró carrito con ese id (${id_cart})` });
-        }
-        else {
-            indiceBuscadoProd = Items[indiceBuscadoCart].productos.findIndex(p => p._id === id_prod);
-
-            if (indiceBuscadoProd === -1) {
-                res.json({ mensaje: `no se encontró producto con ese id (${id_prod}) , en el carrito con id (${id_cart}` });        
-             } else {
-                let borrados
-                if(PERSISTENCIA === "mysql"  || PERSISTENCIA === "sqlite")
-                     borrados = await cartTest.deleteByIdProd(id_cart, id_prod);
-                else
-                     borrados = await cartTest.deleteByIdProd(indiceBuscadoCart, indiceBuscadoProd);
-                res.json(borrados);
-             }   
+if(Items.message)
+  loggerError(Items.message)
+else {
+    if(Prods.message)
+    loggerError(Prods.message)
+   else {
+     if(req.session.user) {
+ 
+         const indiceBuscadoCart = Items.findIndex(c => c.usuario === req.session.user);
+     
+         let indiceBuscadoProd
+         if(PERSISTENCIA === "mysql"  || PERSISTENCIA === "sqlite"){
+              indiceBuscadoProd = Prods.findIndex(p => p._id === req.params.id_prod);
            }
-        }
-    
+         else { 
+             if (indiceBuscadoCart === -1) { 
+                 res.status(404);
+                 loggerWarn(`no se encontró carrito para el usuario (${req.session.user})`)
+                 res.json({ mensaje: `no se encontró carrito para el usuario (${req.session.user})` });
+             }
+             else {
+                 indiceBuscadoProd = Items[indiceBuscadoCart].productos.findIndex(p => p._id === req.params.id_prod);
+     
+                 if (indiceBuscadoProd === -1) {
+                     loggerWarn(`no se encontró producto con ese id (${req.params.id_prod}`)
+                     res.json({ mensaje: `no se encontró producto con ese id (${req.params.id_prod}) , en el carrito del usuario (${req.session.user})` });        
+                  } else {
+                     let borrados
+                     if(PERSISTENCIA === "mysql"  || PERSISTENCIA === "sqlite") {
+                         const id_cart = prodTest.buscarIdCart(req.session.user)
+                         if(id_cart.message)
+                          loggerError(id_cart.message)
+                         else
+                          borrados = await cartTest.deleteByIdProd(id_cart, req.params.id_prod);
+                          if(borrados.message)
+                            loggerError(borrados.message)
+                          else 
+                            res.json(borrados);
+                     }
+                     else
+                          borrados = await cartTest.deleteByIdProd(indiceBuscadoCart, indiceBuscadoProd);
+                          if(borrados.message)
+                            loggerError(borrados.message)
+                          else
+                            res.json(borrados);
+                  }     
+                }
+             }
+         } else {
+             loggerWarn("No hay usuario logueado")
+             res.json({"mensaje": "No hay usuario logueado"})
+   }
+  }
+ }
 }
 
 
 
-export  {controladorPostItems, controladorPostItemProducts, controladorGetItemsSegunId,
+export  {controladorPostItemProducts, controladorGetItemsSegunId,
 controladorDeleteItemsSegunId, controladorDeleteItemsSegunIdProducts};

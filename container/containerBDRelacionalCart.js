@@ -25,7 +25,7 @@ class Contenedor{
             return data[0]
         }
        catch(error){
-            error => { throw error}
+            return error
         } 
 
       }
@@ -39,7 +39,7 @@ class Contenedor{
             return insertado[0];
             }
             catch(error){
-            error => { throw error }
+              return error
             } 
         }
         
@@ -59,7 +59,7 @@ class Contenedor{
           }
 
         catch(error){
-            error => { throw error}
+            return error
         } 
 
      }
@@ -78,7 +78,7 @@ class Contenedor{
           }
 
         catch(error){
-            error => { throw error}
+            return error
         } 
 
     }
@@ -92,7 +92,7 @@ class Contenedor{
             return carritoVaciado
         }
         catch(error){
-            error => { throw error}
+            return error
         } 
     }
 
@@ -105,10 +105,21 @@ class Contenedor{
         return eliminado[0]
         }
         catch(error){
-            error => { throw error}
+            return error
         }
     }
 
+
+        //CARRITO
+        async buscarIdCart(usuario){
+            try {
+                const idCart = await this.cliente(this.tabla2).select().where("username", "=", usuario)
+                return idCart
+            }
+            catch(error){
+                return error
+            } 
+        }
 
   }
 

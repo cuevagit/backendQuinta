@@ -23,7 +23,7 @@ class Container{
         } 
         catch (error){
             this.#productos = [];
-            error => { throw error}
+            return error
         } 
 
         try {
@@ -32,7 +32,7 @@ class Container{
             return 'Id del objeto guardado: ' + this.#productos[this.#productos.length - 1].id
         }
         catch(error){
-            error => { throw error}
+            return error
         } 
 
       }
@@ -55,7 +55,7 @@ class Container{
         }
 
         catch(error){
-            error => { throw error}
+            return error
         } 
 
      }
@@ -76,7 +76,7 @@ class Container{
             }
 
         catch(error){
-            error => { throw error}
+            return error
         } 
 
     }
@@ -90,7 +90,7 @@ class Container{
             return this.#productos.filter(p => p._id == id)
         }
         catch(error){
-            error => { throw error}
+            return error
         } 
     }
 
@@ -112,7 +112,7 @@ class Container{
             return objeto;
         }
         catch(error){
-            error => { throw error}
+            return error
         } 
     }
 }
@@ -127,7 +127,7 @@ class Container{
         } 
         catch (error){
             this.#cart = [];
-            error => { throw error}
+            return error
         } 
 
         try {
@@ -136,7 +136,7 @@ class Container{
             return 'Id del objeto guardado: ' + this.#cart[this.#cart.length - 1].id
         }
         catch(error){
-            error => { throw error}
+            return error
         } 
 
       }
@@ -153,7 +153,7 @@ class Container{
             return objeto;
         }
         catch(error){
-            error => { throw error }
+            return error
         } 
     }
 
@@ -175,7 +175,7 @@ class Container{
         }
 
         catch(error){
-            error => { throw error}
+            return error
         } 
 
      }
@@ -192,7 +192,7 @@ class Container{
             return this.#cart[id]
         }
         catch(error){
-            error => { throw error}
+            return error
         } 
     }
 
@@ -206,7 +206,7 @@ class Container{
             return eliminado
         }
         catch(error){
-            error => { throw error}
+            return error
         } 
     }
 
@@ -226,7 +226,7 @@ class Container{
             }
 
         catch(error){
-            error => { throw error}
+            return error
         } 
 
     }

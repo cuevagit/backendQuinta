@@ -8,9 +8,9 @@ class Container{
         this.coleccion = mongoDatabase.collection(nombreColeccion);
     }
 
+    
 
-
-    //PRODUCTOS y CARRITO
+    //PRODUCTOS y CARRITO 
     async save(objeto){
  
         try {
@@ -18,14 +18,36 @@ class Container{
             return 'Id del objeto guardado: ' + this.coleccion._id
         } 
         catch (error){
-            error => { throw error}
+            return error
         } 
 
       }
 
 
     //PRODUCTOS y CARRITO
-    async getById(id){
+    async getByIdUser(usuario){
+       
+        try {
+
+            const carrito = await this.coleccion.find({usuario: usuario}).toArray()
+
+            if(!carrito){
+                return null
+            }else{
+                return carrito [0];
+            }
+            
+        }
+
+        catch(error){
+            return error
+        } 
+
+     }
+
+
+
+     async getById(id){
        
         try {
 
@@ -62,7 +84,7 @@ class Container{
         }
 
         catch(error){
-            error => { throw error}
+            return error
         } 
 
     }
@@ -82,7 +104,7 @@ class Container{
         }
 
         catch(error){
-            error => { throw error}
+            return error
         } 
 
     }
@@ -96,7 +118,7 @@ class Container{
             return objeto;
         }
         catch(error){
-            error => { throw error}
+            return error
         } 
     }
 
@@ -108,19 +130,19 @@ class Container{
             return objeto;
         }
         catch(error){
-            error => { throw error }
+            return error
         } 
     }
 
 
     //CARRITO
-    async deleteByIdCart(id){
+    async deleteByIdCart(usuario){
         try {
-            const carritoVaciado = await this.coleccion.updateOne({_id: id}, {$set: {"productos": []}})
+            const carritoVaciado = await this.coleccion.updateOne({usuario: usuario}, {$set: {"productos": []}})
             return carritoVaciado
         }
         catch(error){
-            error => { throw error}
+           return error
         } 
     }
 
@@ -130,16 +152,19 @@ class Container{
         try {
             this.cart = await this.getAll()
             const eliminado = this.cart[indice_cart].productos.splice(indice_prod, 1)
-            await this.coleccion.updateOne({_id: this.cart[indice_cart]._id}, {$set: {"productos": this.cart[indice_cart]}})
+            await this.coleccion.updateOne({_id: this.cart[indice_cart]._id}, {$set: {"productos": this.cart[indice_cart].productos}})
             return eliminado
         }
         catch(error){
-            error => { throw error}
+            return error
         } 
     }
 
 
  }
+
+
+
 
 
  export default Container;
