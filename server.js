@@ -28,6 +28,7 @@ servidor.use('/api/products', routerApiProducts)
 servidor.use('/api/shoppingcartproducts', routerApiShoppingCart)
 servidor.use('/api/buy', routerApiBuy)
 servidor.use(express.static('public'))
+servidor.use((err, req, res, next) => loggerError(err.message));
 
 //Si viene de una ruta no implementada
 servidor.all('*', (req, res) => {

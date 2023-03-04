@@ -1,5 +1,5 @@
 import { mongoDatabase } from '../db/mongoClient.js';
-
+import { USUARIOADMIN } from '../config.js'
 
 class ContainerUser{
 
@@ -13,7 +13,7 @@ class ContainerUser{
     async esAdmin(usuario){   
         try {
             const user =  await this.coleccion.findOne({username: usuario})
-            if(user.tipo_usuario == "Admin"){ 
+            if(user.tipo_usuario == USUARIOADMIN){ 
               return true
              }
             else{
