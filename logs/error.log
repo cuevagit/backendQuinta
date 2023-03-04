@@ -348,3 +348,5 @@
 {"level":40,"time":1677952212811,"pid":16804,"hostname":"DESKTOP-G8F9RK0","msg":"la tabla \"chat\" ya existe. no se realizaron cambios"}
 {"level":40,"time":1677952874469,"pid":4744,"hostname":"DESKTOP-G8F9RK0","msg":"la tabla \"productos\" ya existe. no se realizaron cambios"}
 {"level":40,"time":1677952874476,"pid":4744,"hostname":"DESKTOP-G8F9RK0","msg":"la tabla \"chat\" ya existe. no se realizaron cambios"}
+{"level":40,"time":1677954459094,"pid":8372,"hostname":"DESKTOP-G8F9RK0","msg":"la tabla \"productos\" ya existe. no se realizaron cambios"}
+{"level":40,"time":1677954459098,"pid":8372,"hostname":"DESKTOP-G8F9RK0","msg":"la tabla \"chat\" ya existe. no se realizaron cambios"}
