@@ -3,7 +3,6 @@ import loggerWarn from '../pinoWarn.js';
 import nodemailer from '../nodemailer.js'
 import ContainerMongoDB from '../container/containerMongodb.js'
 import ContainerUser from '../container/containerUser.js'
-import {randomUUID}  from 'crypto';
 import {EMAILADMIN} from '../config.js'
 
 
@@ -32,12 +31,12 @@ const orders = new ContainerMongoDB('orders')
        else {
          nodemailer("Mailer", EMAILADMIN, "nuevo pedido de " + usuario.apellido + ", " + usuario.nombre + " - " + usuario.username , html, null)
          html = ""
-         const nrocomprobante = randomUUID();
+         const nrocomprobante = Math.floor(Math.random()*999999);
          html = html + `<strong>Su pedido #${nrocomprobante} está en proceso.</strong>`
          nodemailer("Mailer", usuario.username, "Pedido #" + nrocomprobante + " en Proceso" , html, null)
  
          //Vacio el carrito
-         //  cartTest.deleteByIdCart(req.session.user)
+           cartTest.deleteByIdCart(req.session.user)
          ///
          var f = new Date();
          const fecha = f.getDate() + "/" + (f.getMonth() +1) + "/" + f.getFullYear();
