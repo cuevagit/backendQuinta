@@ -426,3 +426,7 @@
 {"level":40,"time":1677963141643,"pid":10888,"hostname":"DESKTOP-G8F9RK0","msg":"la tabla \"chat\" ya existe. no se realizaron cambios"}
 {"level":40,"time":1677963260782,"pid":11952,"hostname":"DESKTOP-G8F9RK0","msg":"la tabla \"productos\" ya existe. no se realizaron cambios"}
 {"level":40,"time":1677963260800,"pid":11952,"hostname":"DESKTOP-G8F9RK0","msg":"la tabla \"chat\" ya existe. no se realizaron cambios"}
+{"level":40,"time":1678032104047,"pid":4128,"hostname":"DESKTOP-G8F9RK0","msg":"la tabla \"productos\" ya existe. no se realizaron cambios"}
+{"level":40,"time":1678032104051,"pid":4128,"hostname":"DESKTOP-G8F9RK0","msg":"la tabla \"chat\" ya existe. no se realizaron cambios"}
+{"level":40,"time":1678032115151,"pid":4128,"hostname":"DESKTOP-G8F9RK0","msg":"No hay usuario logueado"}
+{"level":40,"time":1678032211278,"pid":4128,"hostname":"DESKTOP-G8F9RK0","msg":"No hay productos en el carrito"}

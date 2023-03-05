@@ -39,7 +39,7 @@ const orders = new ContainerMongoDB('orders')
            cartTest.deleteByIdCart(req.session.user)
          ///
          var f = new Date();
-         const fecha = f.getDate() + "/" + (f.getMonth() +1) + "/" + f.getFullYear();
+         const fecha = f.toLocaleString();
       
          const order = {
           buyer: { usuario: usuario.username, apellido: usuario.apellido, nombre: usuario.nombre, foto: usuario.foto},
