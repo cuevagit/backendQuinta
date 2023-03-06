@@ -3,14 +3,14 @@ const routerApiShoppingCart = express.Router();
 
 
 import  {controladorPostItemProducts,
-        controladorGetItemsSegunId,
-        controladorDeleteItemsSegunId,
+        controladorGetItems,
+        controladorDeleteItems,
         controladorDeleteItemsSegunIdProducts}  from '../controllers/controllerShoppingCart.js';
 
 
 routerApiShoppingCart.post('/', controladorPostItemProducts);
-routerApiShoppingCart.get('/', controladorGetItemsSegunId);
-routerApiShoppingCart.delete('/', controladorDeleteItemsSegunId);
+routerApiShoppingCart.get('/', controladorGetItems);
+routerApiShoppingCart.delete('/', controladorDeleteItems);
 routerApiShoppingCart.delete('/:id_prod', controladorDeleteItemsSegunIdProducts);
 
 

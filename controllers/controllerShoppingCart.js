@@ -1,6 +1,4 @@
-import {randomUUID}  from 'crypto';
 import {PERSISTENCIA}  from '../db/config.js'
-import {user}  from '../db/config.js'
 import ContainerMongodb from '../container/containerMongodb.js'
 import ContainerFirestore from '../container/containerFirestore.js'
 import Container from '../container/containerFs.js'
@@ -42,7 +40,13 @@ async function controladorPostItemProducts(req, res) {
     const Items = await cartTest.getAll();
     const Prods = await prodTest.getAll();
 
-    if(Items.message) 
+    if(!Items)
+      return "No hay carritos"
+
+    if(!Prods)
+      return "No hay productos"
+
+     if(Items.message)
       loggerError(Items.message)
     else {
       if(Prods.message) 
@@ -79,7 +83,6 @@ async function controladorPostItemProducts(req, res) {
                     else
                      res.json(insertado)
                 }
-
               }
               else {
                 Items[indiceBuscado].productos.push(req.body);
@@ -96,38 +99,42 @@ async function controladorPostItemProducts(req, res) {
          }
         }
     }
-
-      }
-
+  }
 }
 
 
-async function controladorGetItemsSegunId(req, res) {
-    const Items = await cartTest.getById(req.session.user);
+async function controladorGetItems(req, res) {
+    const Items = await cartTest.getByIdUser(req.session.user);
 
-if(Items.message) 
- loggerError(Items.message)
-else {
+  if(!Items)
+    return "No hay carritos"
+
+
     if(req.session.user) {
-        if (!Items) {
+        if (!Items.productos[0]) {
             res.status(404);
-            loggerWarn(`no se encontró carrito para el usuario (${req.session.user})`)
-            res.json({ mensaje: `no se encontró carrito para el usuario (${req.session.user})` });
+            loggerWarn(`el carrito del usuario (${req.session.user}) está vacio`)
+            res.json({ mensaje: `el carrito del usuario (${req.session.user}) está vacio` });
         } else {
-            res.json(Items);
-        }
-     } else {
+            if(Items.message) 
+               loggerError(Items.message)
+            else 
+               res.json(Items.productos);
+          } 
+        } else {
         loggerWarn("No hay usuario logueado")
         res.json({"mensaje": "No hay usuario logueado"})
-     }
+      } 
 
- }
-}
-
+    } 
 
 
-async function controladorDeleteItemsSegunId(req, res) {
+
+async function controladorDeleteItems(req, res) {
     const Items = await cartTest.getAll();
+
+ if(!Items)
+      return "No hay carritos"
 
 if(Items.message) 
  loggerError(Items.message)
@@ -139,14 +146,19 @@ else {
     
         if (indiceBuscado === -1) {
             res.status(404);
-            loggerWarn(`no se encontró carrito para el usuario (${req.session.user})`)
-            res.json({ mensaje: `no se encontró carrito para el usuario (${req.session.user})` });
+            loggerWarn(`no existe carrito para el usuario (${req.session.user})`)
+            res.json({ mensaje: `no existe carrito para el usuario (${req.session.user})` });
         } else {
+         if(Items[indiceBuscado].productos[0]) {
             const resul = await cartTest.deleteByIdCart(req.session.user);
             if(resul.message)
              loggerError(resul.message)
             else
-             res.json(borrados);
+             res.json(borrados.productos);
+         } else {
+            loggerWarn(`el carrito para el usuario (${req.session.user}) no tiene productos`)
+            res.json({ mensaje: `el carrito para el usuario (${req.session.user}) no tiene productos` });
+         }
         }
      }  else {
         loggerWarn("No hay usuario logueado")
@@ -161,6 +173,11 @@ async function controladorDeleteItemsSegunIdProducts(req, res) {
     const Items = await cartTest.getAll();
     const Prods = await prodTest.getAll();
 
+    if(!Items)
+      return "No hay carritos"
+
+    if(!Prods)
+      return "No hay productos"
 
 if(Items.message)
   loggerError(Items.message)
@@ -206,7 +223,7 @@ else {
                           if(borrados.message)
                             loggerError(borrados.message)
                           else
-                            res.json(borrados);
+                            res.json(borrados[0]);
                   }     
                 }
              }
@@ -220,5 +237,5 @@ else {
 
 
 
-export  {controladorPostItemProducts, controladorGetItemsSegunId,
-controladorDeleteItemsSegunId, controladorDeleteItemsSegunIdProducts};
+export  {controladorPostItemProducts, controladorGetItems,
+controladorDeleteItems, controladorDeleteItemsSegunIdProducts};

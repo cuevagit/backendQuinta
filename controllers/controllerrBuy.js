@@ -16,6 +16,7 @@ const orders = new ContainerMongoDB('orders')
 
   if(req.session.user) { 
     const prodcutsCart = await cartTest.getByIdUser(req.session.user)
+    
     if(prodcutsCart) { 
     if(prodcutsCart.message) 
       loggerError(prodcutsCart.message)
