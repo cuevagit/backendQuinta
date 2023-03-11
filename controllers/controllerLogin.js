@@ -52,7 +52,6 @@ async function controladorRegistro(req, res) {
   ////////////
 
   const {password} = await users.buscar_usuario(req.body.username)
-  console.log(password)
 
   //Envio correo al administrador con los datos del usuario dado de alta
   const html = `<h1 style="color: blue;">Datos del Usuario creado: </h1> <strong>Usuario: </strong> ${req.body.username} <br> <strong>Contraseña: </strong> ${password} <br> <strong>Nombre: </strong> ${req.body.nombre} <br> <strong>Apellido: </strong> ${req.body.apellido} <br> <strong>Tipo de Usuario: </strong> "Usuario" <br>`
