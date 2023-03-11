@@ -30,11 +30,11 @@ const orders = new ContainerMongoDB('orders')
        if(usuario.message)
          loggerError(usuario.message)
        else {
-         nodemailer("Mailer", EMAILADMIN, "nuevo pedido de " + usuario.apellido + ", " + usuario.nombre + " - " + usuario.username , html, null)
+         await nodemailer("Mailer", EMAILADMIN, "nuevo pedido de " + usuario.apellido + ", " + usuario.nombre + " - " + usuario.username , html, null)
          html = ""
          const nrocomprobante = Math.floor(Math.random()*999999);
          html = html + `<strong>Su pedido #${nrocomprobante} está en proceso.</strong>`
-         nodemailer("Mailer", usuario.username, "Pedido #" + nrocomprobante + " en Proceso" , html, null)
+         await nodemailer("Mailer", usuario.username, "Pedido #" + nrocomprobante + " en Proceso" , html, null)
  
          //Vacio el carrito
            cartTest.deleteByIdCart(req.session.user)

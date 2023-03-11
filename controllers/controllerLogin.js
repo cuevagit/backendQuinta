@@ -51,10 +51,12 @@ async function controladorRegistro(req, res) {
     cart.save(carrito)  
   ////////////
 
+  const {password} = await users.buscar_usuario(req.body.username)
+  console.log(password)
 
   //Envio correo al administrador con los datos del usuario dado de alta
-  const html = `<h1 style="color: blue;">Datos del Usuario creado: </h1> <strong>Usuario: </strong> ${req.body.username} <br> <strong>Contraseña: </strong> ${req.body.password} <br> <strong>Nombre: </strong> ${req.body.nombre} <br> <strong>Apellido: </strong> ${req.body.apellido} <br> <strong>Tipo de Usuario: </strong> "Usuario" <br>`
-  nodemailer("Mailer", EMAILADMIN, "nuevo registro", html, null)
+  const html = `<h1 style="color: blue;">Datos del Usuario creado: </h1> <strong>Usuario: </strong> ${req.body.username} <br> <strong>Contraseña: </strong> ${password} <br> <strong>Nombre: </strong> ${req.body.nombre} <br> <strong>Apellido: </strong> ${req.body.apellido} <br> <strong>Tipo de Usuario: </strong> "Usuario" <br>`
+  await nodemailer("Mailer", EMAILADMIN, "nuevo registro", html, null)
   res.json(objeto)
 
  }
@@ -74,5 +76,26 @@ async function controladorInfousuario(req, res){
   }
 
  }
+
+
+ 
+async function esAdmin(req, res, next){
+
+  if(req.session.user){
+    const usuario = await users.esAdmin(req.session.user)
+    if(usuario.message)
+     loggerError(usuario.message)
+    else
+       if(usuario)
+         next()
+       else
+         res.json({"mensaje": "El usuario no puede registrar usuarios porque no es Admin"})
+   } else {
+    loggerWarn("No hay usuario logueado")
+    res.json({"mensaje": "No hay usuario logueado"})
+  }
+
+ }
+
   
-export {controladorLoginp, controladorRegistro, controladorLogout, controladorInfousuario}
+export {controladorLoginp, controladorRegistro, controladorLogout, controladorInfousuario, esAdmin}

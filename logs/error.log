@@ -543,3 +543,23 @@
 {"level":40,"time":1678052643786,"pid":13024,"hostname":"DESKTOP-G8F9RK0","msg":"la tabla \"productos\" ya existe. no se realizaron cambios"}
 {"level":40,"time":1678052643808,"pid":13024,"hostname":"DESKTOP-G8F9RK0","msg":"la tabla \"chat\" ya existe. no se realizaron cambios"}
 {"level":40,"time":1678052646235,"pid":13024,"hostname":"DESKTOP-G8F9RK0","msg":"No hay usuario logueado"}
+{"level":40,"time":1678537626169,"pid":7344,"hostname":"DESKTOP-G8F9RK0","msg":"la tabla \"productos\" ya existe. no se realizaron cambios"}
+{"level":40,"time":1678537626172,"pid":7344,"hostname":"DESKTOP-G8F9RK0","msg":"la tabla \"chat\" ya existe. no se realizaron cambios"}
+{"level":40,"time":1678538307959,"pid":6152,"hostname":"DESKTOP-G8F9RK0","msg":"la tabla \"productos\" ya existe. no se realizaron cambios"}
+{"level":40,"time":1678538307961,"pid":6152,"hostname":"DESKTOP-G8F9RK0","msg":"la tabla \"chat\" ya existe. no se realizaron cambios"}
+{"level":50,"time":1678538411628,"pid":6152,"hostname":"DESKTOP-G8F9RK0","msg":"User already exists"}
+{"level":40,"time":1678538495207,"pid":2344,"hostname":"DESKTOP-G8F9RK0","msg":"la tabla \"productos\" ya existe. no se realizaron cambios"}
+{"level":40,"time":1678538495212,"pid":2344,"hostname":"DESKTOP-G8F9RK0","msg":"la tabla \"chat\" ya existe. no se realizaron cambios"}
+{"level":40,"time":1678538661026,"pid":6132,"hostname":"DESKTOP-G8F9RK0","msg":"la tabla \"productos\" ya existe. no se realizaron cambios"}
+{"level":40,"time":1678538661029,"pid":6132,"hostname":"DESKTOP-G8F9RK0","msg":"la tabla \"chat\" ya existe. no se realizaron cambios"}
+{"level":40,"time":1678538694900,"pid":10476,"hostname":"DESKTOP-G8F9RK0","msg":"la tabla \"productos\" ya existe. no se realizaron cambios"}
+{"level":40,"time":1678538694904,"pid":10476,"hostname":"DESKTOP-G8F9RK0","msg":"la tabla \"chat\" ya existe. no se realizaron cambios"}
+{"level":40,"time":1678538738984,"pid":3744,"hostname":"DESKTOP-G8F9RK0","msg":"la tabla \"productos\" ya existe. no se realizaron cambios"}
+{"level":40,"time":1678538738987,"pid":3744,"hostname":"DESKTOP-G8F9RK0","msg":"la tabla \"chat\" ya existe. no se realizaron cambios"}
+{"level":40,"time":1678539743235,"pid":9852,"hostname":"DESKTOP-G8F9RK0","msg":"la tabla \"productos\" ya existe. no se realizaron cambios"}
+{"level":40,"time":1678539743239,"pid":9852,"hostname":"DESKTOP-G8F9RK0","msg":"la tabla \"chat\" ya existe. no se realizaron cambios"}
+{"level":40,"time":1678539761594,"pid":4240,"hostname":"DESKTOP-G8F9RK0","msg":"la tabla \"productos\" ya existe. no se realizaron cambios"}
+{"level":40,"time":1678539761607,"pid":4240,"hostname":"DESKTOP-G8F9RK0","msg":"la tabla \"chat\" ya existe. no se realizaron cambios"}
+{"level":40,"time":1678539831804,"pid":12252,"hostname":"DESKTOP-G8F9RK0","msg":"la tabla \"productos\" ya existe. no se realizaron cambios"}
+{"level":40,"time":1678539831806,"pid":12252,"hostname":"DESKTOP-G8F9RK0","msg":"la tabla \"chat\" ya existe. no se realizaron cambios"}
+{"level":40,"time":1678539845652,"pid":12252,"hostname":"DESKTOP-G8F9RK0","msg":"No hay usuario logueado"}

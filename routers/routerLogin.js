@@ -4,12 +4,13 @@ import passport from "passport";
 import {controladorRegistro} from '../controllers/controllerLogin.js';
 import {controladorLogout} from '../controllers/controllerLogin.js';
 import {controladorInfousuario} from '../controllers/controllerLogin.js';
-
+import {esAdmin} from '../controllers/controllerLogin.js';
 
 const routerLogin = express.Router();
 
+
 routerLogin.post('/login', passport.authenticate("login"),  controladorLoginp); 
-routerLogin.post('/api/users', passport.authenticate("register"), controladorRegistro);
+routerLogin.post('/api/users', esAdmin, passport.authenticate("register"), controladorRegistro);
 routerLogin.get('/api/userinfo', controladorInfousuario);
 routerLogin.post('/logout',  controladorLogout);
 
