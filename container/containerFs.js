@@ -103,7 +103,7 @@ class Container{
         productos[indiceBuscado] = objeto;
 
         if (indiceBuscado === -1) {
-            return (`no se encontró producto con ese id (${id})`);
+            return (`no se encontró producto con ese id (${objeto._id})`);
         } else {
 
         try {
