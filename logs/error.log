@@ -563,3 +563,5 @@
 {"level":40,"time":1678539831804,"pid":12252,"hostname":"DESKTOP-G8F9RK0","msg":"la tabla \"productos\" ya existe. no se realizaron cambios"}
 {"level":40,"time":1678539831806,"pid":12252,"hostname":"DESKTOP-G8F9RK0","msg":"la tabla \"chat\" ya existe. no se realizaron cambios"}
 {"level":40,"time":1678539845652,"pid":12252,"hostname":"DESKTOP-G8F9RK0","msg":"No hay usuario logueado"}
+{"level":40,"time":1678545125296,"pid":10368,"hostname":"DESKTOP-G8F9RK0","msg":"la tabla \"productos\" ya existe. no se realizaron cambios"}
+{"level":40,"time":1678545125299,"pid":10368,"hostname":"DESKTOP-G8F9RK0","msg":"la tabla \"chat\" ya existe. no se realizaron cambios"}

@@ -103,8 +103,7 @@ class Container{
         productos[indiceBuscado] = objeto;
 
         if (indiceBuscado === -1) {
-            res.status(404);
-            res.json({ mensaje: `no se encontró producto con ese id (${id})` });
+            return (`no se encontró producto con ese id (${id})`);
         } else {
 
         try {
