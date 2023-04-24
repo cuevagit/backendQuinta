@@ -1,0 +1,40 @@
+import { mongoDatabase } from '../db/mongoClient.js';
+
+
+
+class ContainerUser{
+
+    coleccion;
+
+    constructor(nombreColeccion) {
+        this.coleccion = mongoDatabase.collection(nombreColeccion);
+    }
+
+
+        //USUARIO
+        async save(objeto){
+ 
+            try {
+                await this.coleccion.insertOne(objeto)
+                return objeto
+            } 
+            catch (error){
+                return error
+            } 
+    
+          }
+
+
+    async buscar_usuario(usuario){
+        try {
+            const user = await this.coleccion.findOne({email: usuario})
+            return user
+        } catch (error) {
+            return error
+        }
+   }
+
+
+}
+
+export {ContainerUser};
