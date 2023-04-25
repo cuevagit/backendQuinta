@@ -20,7 +20,7 @@ export class order {
 
     async listarOrder(usuario) {
         try {
-            const dtos = await this.#dao.getByIdUserOrders(usuario)
+            const dtos = await this.#dao.getByIdUserOrders(usuario._id)
           if(dtos !== []){
             const datos = dtos.map(dto => new Ordenes(dto))
             return datos

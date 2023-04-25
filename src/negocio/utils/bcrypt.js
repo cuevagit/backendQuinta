@@ -5,6 +5,6 @@ export const createHash = function (password) {
 };
 
 export const validatePassword = (user, password) => {
-    return bCrypt.compareSync(password, user.password);
+    return bCrypt.compareSync(password, user);
 };
 

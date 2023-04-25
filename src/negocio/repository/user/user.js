@@ -1,4 +1,4 @@
-import User from '../../models/user.js'
+import Usuario from '../../models/user.js'
 
 
 export class user {
@@ -21,13 +21,27 @@ export class user {
     async buscar_usuario(usuario) {
         try {
             const resul = await this.#dao.buscar_usuario(usuario)
-            const user = new User(resul)
-            return user
+           if(resul){
+            const usermodel = new Usuario(resul)
+            return usermodel
+           } else 
+            return null
         } catch(error) {
             return error
         }
     }
 
+    async usuarioInfo(usuario) {
+        try {
+            const usuarioBuscado = new Usuario(usuario)
+           if(usuarioBuscado){
+            return usuarioBuscado
+           } else 
+            return null
+        } catch(error) {
+            return error
+        }
+    }              
 
 }
 

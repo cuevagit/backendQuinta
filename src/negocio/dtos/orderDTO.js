@@ -6,7 +6,7 @@ export class OrderDto {
         if (!_id) throw new Error('parametro requerido')
         this._id = _id
 
-        if (typeof fecha !== 'date') throw new Error('tipo invalido')
+        if (!fecha instanceof Date) throw new Error('tipo invalido')
         if (!fecha) throw new Error('parametro requerido')
         this.fecha = fecha
 

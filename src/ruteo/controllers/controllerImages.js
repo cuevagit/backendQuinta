@@ -4,7 +4,7 @@ function controladorSubirImagen(req, res){
 
     if (!file) {
         res.status(400)
-        return res.send('Please upload a file')
+        return res.status(200).send('Please upload a file')
     }
    
     const url = req.protocol + '://' + req.get('host') + '/' + file.originalname

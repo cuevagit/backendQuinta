@@ -11,7 +11,7 @@ async function controladorRegistro(req, res) {
 
   if(existe != null){
     loggerWarn("El usuario ya existe")
-    res.status(203).json({mensaje: "El usuario ya existe"})
+    res.status(401).json({mensaje: "El usuario ya existe"})
     return "El usuario ya existe"
   }
 
@@ -40,11 +40,13 @@ async function controladorRegistro(req, res) {
 
 async function controladorInfousuario(req, res){
 
-    const usuario = await await userService.buscar_usuario(req.user)
-    if(usuario.message)
-     loggerError(usuario.message)
-    else
-     res.json(usuario)
+  try {
+    const usuario = await userService.usuarioInfo(req.user)
+    res.status(200).json(usuario)
+  } catch (error) {
+    loggerError(error)
+    res.status(404).json(error)
+  }
 
  }
 

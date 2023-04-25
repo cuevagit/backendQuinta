@@ -6,7 +6,8 @@ import loggerWarn from '../../negocio/utils/pinoWarn.js';
 export async function esAdmin(req, res, next){
 
     if(req.user){
-      const usuario = await userService.buscar_usuario(req.user)
+      //const usuario = await userService.buscar_usuario(req.user)
+      const usuario = req.user
       if(usuario.message)
        loggerError(usuario.message)
       else

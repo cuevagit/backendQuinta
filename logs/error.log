@@ -2059,3 +2059,314 @@
 {"level":40,"time":1682348712328,"pid":11816,"hostname":"DESKTOP-G8F9RK0","msg":"Le queda (84596) segundos para que la sesion se expire"}
 {"level":40,"time":1682356114198,"pid":2380,"hostname":"DESKTOP-G8F9RK0","msg":"Le queda (76471) segundos para que la sesion se expire"}
 {"level":40,"time":1682356175970,"pid":12300,"hostname":"DESKTOP-G8F9RK0","msg":"Le queda (76410) segundos para que la sesion se expire"}
+{"level":40,"time":1682383788613,"pid":3868,"hostname":"DESKTOP-G8F9RK0","msg":"Le queda (49520) segundos para que la sesion se expire"}
+{"level":50,"time":1682383789144,"pid":3868,"hostname":"DESKTOP-G8F9RK0","msg":"Prods.findIndex is not a function"}
+{"level":40,"time":1682383874983,"pid":2864,"hostname":"DESKTOP-G8F9RK0","msg":"Le queda (49434) segundos para que la sesion se expire"}
+{"level":50,"time":1682383875505,"pid":2864,"hostname":"DESKTOP-G8F9RK0","msg":"Prods.findIndex is not a function"}
+{"level":40,"time":1682384092115,"pid":2864,"hostname":"DESKTOP-G8F9RK0","msg":"Le queda (49216) segundos para que la sesion se expire"}
+{"level":40,"time":1682384158484,"pid":8436,"hostname":"DESKTOP-G8F9RK0","name":"TokenExpiredError","message":"jwt expired","expiredAt":"2023-04-25T00:42:20.000Z","stack":"TokenExpiredError: jwt expired\n    at C:\\Users\\Usuario\\Desktop\\2022\\CoderHouse\\04 - Backend Página\\25 - trabajo_final\\node_modules\\jsonwebtoken\\verify.js:152:21\n    at getSecret (C:\\Users\\Usuario\\Desktop\\2022\\CoderHouse\\04 - Backend Página\\25 - trabajo_final\\node_modules\\jsonwebtoken\\verify.js:90:14)\n    at module.exports [as verify] (C:\\Users\\Usuario\\Desktop\\2022\\CoderHouse\\04 - Backend Página\\25 - trabajo_final\\node_modules\\jsonwebtoken\\verify.js:94:10)\n    at validateUser (file:///C:/Users/Usuario/Desktop/2022/CoderHouse/04%20-%20Backend%20P%C3%A1gina/25%20-%20trabajo_final/src/negocio/utils/jwt.js:8:33)\n    at autenticacion (file:///C:/Users/Usuario/Desktop/2022/CoderHouse/04%20-%20Backend%20P%C3%A1gina/25%20-%20trabajo_final/src/negocio/middlewares/autenticacion.js:19:25)\n    at Layer.handle [as handle_request] (C:\\Users\\Usuario\\Desktop\\2022\\CoderHouse\\04 - Backend Página\\25 - trabajo_final\\node_modules\\express\\lib\\router\\layer.js:95:5)\n    at next (C:\\Users\\Usuario\\Desktop\\2022\\CoderHouse\\04 - Backend Página\\25 - trabajo_final\\node_modules\\express\\lib\\router\\route.js:144:13)\n    at Route.dispatch (C:\\Users\\Usuario\\Desktop\\2022\\CoderHouse\\04 - Backend Página\\25 - trabajo_final\\node_modules\\express\\lib\\router\\route.js:114:3)\n    at Layer.handle [as handle_request] (C:\\Users\\Usuario\\Desktop\\2022\\CoderHouse\\04 - Backend Página\\25 - trabajo_final\\node_modules\\express\\lib\\router\\layer.js:95:5)\n    at C:\\Users\\Usuario\\Desktop\\2022\\CoderHouse\\04 - Backend Página\\25 - trabajo_final\\node_modules\\express\\lib\\router\\index.js:284:15","type":"Error","msg":"jwt expired"}
+{"level":40,"time":1682384179191,"pid":8436,"hostname":"DESKTOP-G8F9RK0","msg":"Le queda (48406) segundos para que la sesion se expire"}
+{"level":40,"time":1682384211217,"pid":8436,"hostname":"DESKTOP-G8F9RK0","msg":"Le queda (86382) segundos para que la sesion se expire"}
+{"level":40,"time":1682384243831,"pid":8436,"hostname":"DESKTOP-G8F9RK0","msg":"Le queda (49065) segundos para que la sesion se expire"}
+{"level":40,"time":1682384361531,"pid":7796,"hostname":"DESKTOP-G8F9RK0","msg":"Le queda (48947) segundos para que la sesion se expire"}
+{"level":40,"time":1682384377669,"pid":7796,"hostname":"DESKTOP-G8F9RK0","msg":"Le queda (48931) segundos para que la sesion se expire"}
+{"level":40,"time":1682384415225,"pid":7796,"hostname":"DESKTOP-G8F9RK0","msg":"Le queda (38353) segundos para que la sesion se expire"}
+{"level":40,"time":1682384415752,"pid":7796,"hostname":"DESKTOP-G8F9RK0","msg":"El usuario ya existe"}
+{"level":40,"time":1682384422939,"pid":7796,"hostname":"DESKTOP-G8F9RK0","msg":"Le queda (38346) segundos para que la sesion se expire"}
+{"level":40,"time":1682384423443,"pid":7796,"hostname":"DESKTOP-G8F9RK0","msg":"El usuario ya existe"}
+{"level":40,"time":1682384429160,"pid":7796,"hostname":"DESKTOP-G8F9RK0","msg":"Le queda (38339) segundos para que la sesion se expire"}
+{"level":40,"time":1682384429675,"pid":7796,"hostname":"DESKTOP-G8F9RK0","msg":"El usuario ya existe"}
+{"level":40,"time":1682384450684,"pid":7796,"hostname":"DESKTOP-G8F9RK0","msg":"Le queda (38318) segundos para que la sesion se expire"}
+{"level":40,"time":1682384451190,"pid":7796,"hostname":"DESKTOP-G8F9RK0","msg":"El usuario ya existe"}
+{"level":40,"time":1682384491676,"pid":1456,"hostname":"DESKTOP-G8F9RK0","msg":"Le queda (38277) segundos para que la sesion se expire"}
+{"level":40,"time":1682384492225,"pid":1456,"hostname":"DESKTOP-G8F9RK0","msg":"El usuario ya existe"}
+{"level":40,"time":1682384592771,"pid":1188,"hostname":"DESKTOP-G8F9RK0","msg":"Le queda (38176) segundos para que la sesion se expire"}
+{"level":50,"time":1682384593031,"pid":1188,"hostname":"DESKTOP-G8F9RK0","msg":"Assignment to constant variable."}
+{"level":40,"time":1682384633035,"pid":5032,"hostname":"DESKTOP-G8F9RK0","msg":"Le queda (38135) segundos para que la sesion se expire"}
+{"level":40,"time":1682384633566,"pid":5032,"hostname":"DESKTOP-G8F9RK0","msg":"El usuario ya existe"}
+{"level":40,"time":1682384727555,"pid":5032,"hostname":"DESKTOP-G8F9RK0","msg":"Le queda (38041) segundos para que la sesion se expire"}
+{"level":40,"time":1682384728071,"pid":5032,"hostname":"DESKTOP-G8F9RK0","msg":"El usuario ya existe"}
+{"level":40,"time":1682384784672,"pid":10712,"hostname":"DESKTOP-G8F9RK0","msg":"Le queda (37984) segundos para que la sesion se expire"}
+{"level":40,"time":1682384785196,"pid":10712,"hostname":"DESKTOP-G8F9RK0","msg":"El usuario ya existe"}
+{"level":40,"time":1682384833747,"pid":5612,"hostname":"DESKTOP-G8F9RK0","msg":"Le queda (37935) segundos para que la sesion se expire"}
+{"level":40,"time":1682384834271,"pid":5612,"hostname":"DESKTOP-G8F9RK0","msg":"El usuario ya existe"}
+{"level":40,"time":1682384887176,"pid":2256,"hostname":"DESKTOP-G8F9RK0","msg":"Le queda (37881) segundos para que la sesion se expire"}
+{"level":40,"time":1682384887733,"pid":2256,"hostname":"DESKTOP-G8F9RK0","msg":"El usuario ya existe"}
+{"level":40,"time":1682384927188,"pid":2796,"hostname":"DESKTOP-G8F9RK0","msg":"Le queda (37841) segundos para que la sesion se expire"}
+{"level":40,"time":1682384927736,"pid":2796,"hostname":"DESKTOP-G8F9RK0","msg":"El usuario ya existe"}
+{"level":40,"time":1682384961225,"pid":11216,"hostname":"DESKTOP-G8F9RK0","msg":"Le queda (37807) segundos para que la sesion se expire"}
+{"level":40,"time":1682384961767,"pid":11216,"hostname":"DESKTOP-G8F9RK0","msg":"El usuario ya existe"}
+{"level":40,"time":1682385070140,"pid":3636,"hostname":"DESKTOP-G8F9RK0","msg":"Le queda (37698) segundos para que la sesion se expire"}
+{"level":40,"time":1682385070676,"pid":3636,"hostname":"DESKTOP-G8F9RK0","msg":"El usuario ya existe"}
+{"level":40,"time":1682385142266,"pid":6820,"hostname":"DESKTOP-G8F9RK0","msg":"Le queda (37626) segundos para que la sesion se expire"}
+{"level":40,"time":1682385142788,"pid":6820,"hostname":"DESKTOP-G8F9RK0","msg":"El usuario ya existe"}
+{"level":40,"time":1682385206642,"pid":4976,"hostname":"DESKTOP-G8F9RK0","msg":"Le queda (37562) segundos para que la sesion se expire"}
+{"level":40,"time":1682385207190,"pid":4976,"hostname":"DESKTOP-G8F9RK0","msg":"El usuario ya existe"}
+{"level":40,"time":1682385278502,"pid":5684,"hostname":"DESKTOP-G8F9RK0","msg":"Le queda (37490) segundos para que la sesion se expire"}
+{"level":40,"time":1682385279019,"pid":5684,"hostname":"DESKTOP-G8F9RK0","msg":"El usuario ya existe"}
+{"level":40,"time":1682385358177,"pid":11904,"hostname":"DESKTOP-G8F9RK0","msg":"Le queda (37410) segundos para que la sesion se expire"}
+{"level":40,"time":1682385358694,"pid":11904,"hostname":"DESKTOP-G8F9RK0","msg":"El usuario ya existe"}
+{"level":40,"time":1682385625988,"pid":1300,"hostname":"DESKTOP-G8F9RK0","msg":"Le queda (37143) segundos para que la sesion se expire"}
+{"level":40,"time":1682385626501,"pid":1300,"hostname":"DESKTOP-G8F9RK0","msg":"El usuario ya existe"}
+{"level":40,"time":1682385633912,"pid":1300,"hostname":"DESKTOP-G8F9RK0","msg":"Le queda (37135) segundos para que la sesion se expire"}
+{"level":40,"time":1682385634423,"pid":1300,"hostname":"DESKTOP-G8F9RK0","msg":"El usuario ya existe"}
+{"level":40,"time":1682385664388,"pid":11456,"hostname":"DESKTOP-G8F9RK0","msg":"Le queda (37104) segundos para que la sesion se expire"}
+{"level":40,"time":1682385665305,"pid":11456,"hostname":"DESKTOP-G8F9RK0","msg":"El usuario ya existe"}
+{"level":40,"time":1682385720252,"pid":11028,"hostname":"DESKTOP-G8F9RK0","msg":"Le queda (37048) segundos para que la sesion se expire"}
+{"level":40,"time":1682385720782,"pid":11028,"hostname":"DESKTOP-G8F9RK0","msg":"El usuario ya existe"}
+{"level":40,"time":1682385783576,"pid":6924,"hostname":"DESKTOP-G8F9RK0","msg":"Le queda (36985) segundos para que la sesion se expire"}
+{"level":40,"time":1682385784105,"pid":6924,"hostname":"DESKTOP-G8F9RK0","msg":"El usuario ya existe"}
+{"level":40,"time":1682385971548,"pid":6432,"hostname":"DESKTOP-G8F9RK0","name":"JsonWebTokenError","message":"jwt malformed","stack":"JsonWebTokenError: jwt malformed\n    at module.exports [as verify] (C:\\Users\\Usuario\\Desktop\\2022\\CoderHouse\\04 - Backend Página\\25 - trabajo_final\\node_modules\\jsonwebtoken\\verify.js:63:17)\n    at validateUser (file:///C:/Users/Usuario/Desktop/2022/CoderHouse/04%20-%20Backend%20P%C3%A1gina/25%20-%20trabajo_final/src/negocio/utils/jwt.js:8:33)\n    at autenticacion (file:///C:/Users/Usuario/Desktop/2022/CoderHouse/04%20-%20Backend%20P%C3%A1gina/25%20-%20trabajo_final/src/negocio/middlewares/autenticacion.js:19:25)\n    at Layer.handle [as handle_request] (C:\\Users\\Usuario\\Desktop\\2022\\CoderHouse\\04 - Backend Página\\25 - trabajo_final\\node_modules\\express\\lib\\router\\layer.js:95:5)\n    at next (C:\\Users\\Usuario\\Desktop\\2022\\CoderHouse\\04 - Backend Página\\25 - trabajo_final\\node_modules\\express\\lib\\router\\route.js:144:13)\n    at Route.dispatch (C:\\Users\\Usuario\\Desktop\\2022\\CoderHouse\\04 - Backend Página\\25 - trabajo_final\\node_modules\\express\\lib\\router\\route.js:114:3)\n    at Layer.handle [as handle_request] (C:\\Users\\Usuario\\Desktop\\2022\\CoderHouse\\04 - Backend Página\\25 - trabajo_final\\node_modules\\express\\lib\\router\\layer.js:95:5)\n    at C:\\Users\\Usuario\\Desktop\\2022\\CoderHouse\\04 - Backend Página\\25 - trabajo_final\\node_modules\\express\\lib\\router\\index.js:284:15\n    at Function.process_params (C:\\Users\\Usuario\\Desktop\\2022\\CoderHouse\\04 - Backend Página\\25 - trabajo_final\\node_modules\\express\\lib\\router\\index.js:346:12)\n    at next (C:\\Users\\Usuario\\Desktop\\2022\\CoderHouse\\04 - Backend Página\\25 - trabajo_final\\node_modules\\express\\lib\\router\\index.js:280:10)","type":"Error","msg":"jwt malformed"}
+{"level":40,"time":1682386074282,"pid":4908,"hostname":"DESKTOP-G8F9RK0","msg":"Le queda (86386) segundos para que la sesion se expire"}
+{"level":40,"time":1682386074797,"pid":4908,"hostname":"DESKTOP-G8F9RK0","msg":"El usuario ya existe"}
+{"level":40,"time":1682386128800,"pid":4908,"hostname":"DESKTOP-G8F9RK0","msg":"Le queda (86332) segundos para que la sesion se expire"}
+{"level":40,"time":1682386129306,"pid":4908,"hostname":"DESKTOP-G8F9RK0","msg":"El usuario ya existe"}
+{"level":40,"time":1682386213629,"pid":8960,"hostname":"DESKTOP-G8F9RK0","msg":"Le queda (86247) segundos para que la sesion se expire"}
+{"level":40,"time":1682386214588,"pid":8960,"hostname":"DESKTOP-G8F9RK0","msg":"El usuario ya existe"}
+{"level":40,"time":1682386418488,"pid":3224,"hostname":"DESKTOP-G8F9RK0","msg":"Le queda (86042) segundos para que la sesion se expire"}
+{"level":40,"time":1682386419013,"pid":3224,"hostname":"DESKTOP-G8F9RK0","msg":"El usuario ya existe"}
+{"level":40,"time":1682386429153,"pid":3224,"hostname":"DESKTOP-G8F9RK0","msg":"Le queda (86031) segundos para que la sesion se expire"}
+{"level":40,"time":1682386429681,"pid":3224,"hostname":"DESKTOP-G8F9RK0","msg":"El usuario ya existe"}
+{"level":40,"time":1682386475383,"pid":5612,"hostname":"DESKTOP-G8F9RK0","msg":"Le queda (85985) segundos para que la sesion se expire"}
+{"level":40,"time":1682386475918,"pid":5612,"hostname":"DESKTOP-G8F9RK0","msg":"El usuario ya existe"}
+{"level":40,"time":1682386517586,"pid":7128,"hostname":"DESKTOP-G8F9RK0","msg":"Le queda (85943) segundos para que la sesion se expire"}
+{"level":40,"time":1682386518123,"pid":7128,"hostname":"DESKTOP-G8F9RK0","msg":"El usuario ya existe"}
+{"level":40,"time":1682386574297,"pid":10824,"hostname":"DESKTOP-G8F9RK0","msg":"Le queda (85886) segundos para que la sesion se expire"}
+{"level":40,"time":1682387307933,"pid":8372,"hostname":"DESKTOP-G8F9RK0","msg":"Le queda (85153) segundos para que la sesion se expire"}
+{"level":40,"time":1682387308472,"pid":8372,"hostname":"DESKTOP-G8F9RK0","msg":"El usuario ya existe"}
+{"level":40,"time":1682387394138,"pid":11800,"hostname":"DESKTOP-G8F9RK0","msg":"Le queda (85066) segundos para que la sesion se expire"}
+{"level":40,"time":1682387394670,"pid":11800,"hostname":"DESKTOP-G8F9RK0","msg":"El usuario ya existe"}
+{"level":40,"time":1682387417120,"pid":11800,"hostname":"DESKTOP-G8F9RK0","msg":"Le queda (85043) segundos para que la sesion se expire"}
+{"level":40,"time":1682387417640,"pid":11800,"hostname":"DESKTOP-G8F9RK0","msg":"El usuario ya existe"}
+{"level":40,"time":1682387432525,"pid":11800,"hostname":"DESKTOP-G8F9RK0","msg":"Le queda (85028) segundos para que la sesion se expire"}
+{"level":40,"time":1682387433036,"pid":11800,"hostname":"DESKTOP-G8F9RK0","msg":"El usuario ya existe"}
+{"level":40,"time":1682387488248,"pid":6440,"hostname":"DESKTOP-G8F9RK0","msg":"Le queda (84972) segundos para que la sesion se expire"}
+{"level":40,"time":1682387488771,"pid":6440,"hostname":"DESKTOP-G8F9RK0","msg":"El usuario ya existe"}
+{"level":40,"time":1682387591296,"pid":5328,"hostname":"DESKTOP-G8F9RK0","msg":"Le queda (84869) segundos para que la sesion se expire"}
+{"level":40,"time":1682387591817,"pid":5328,"hostname":"DESKTOP-G8F9RK0","msg":"El usuario ya existe"}
+{"level":40,"time":1682387636164,"pid":9012,"hostname":"DESKTOP-G8F9RK0","msg":"Le queda (84824) segundos para que la sesion se expire"}
+{"level":40,"time":1682387636682,"pid":9012,"hostname":"DESKTOP-G8F9RK0","msg":"El usuario ya existe"}
+{"level":40,"time":1682387704686,"pid":4316,"hostname":"DESKTOP-G8F9RK0","msg":"Le queda (84756) segundos para que la sesion se expire"}
+{"level":40,"time":1682387705213,"pid":4316,"hostname":"DESKTOP-G8F9RK0","msg":"El usuario ya existe"}
+{"level":40,"time":1682387735129,"pid":12208,"hostname":"DESKTOP-G8F9RK0","msg":"Le queda (84725) segundos para que la sesion se expire"}
+{"level":40,"time":1682387735636,"pid":12208,"hostname":"DESKTOP-G8F9RK0","msg":"El usuario ya existe"}
+{"level":40,"time":1682387771510,"pid":7356,"hostname":"DESKTOP-G8F9RK0","msg":"Le queda (84689) segundos para que la sesion se expire"}
+{"level":40,"time":1682387772043,"pid":7356,"hostname":"DESKTOP-G8F9RK0","msg":"El usuario ya existe"}
+{"level":40,"time":1682387789377,"pid":4832,"hostname":"DESKTOP-G8F9RK0","msg":"Le queda (84671) segundos para que la sesion se expire"}
+{"level":40,"time":1682387789903,"pid":4832,"hostname":"DESKTOP-G8F9RK0","msg":"El usuario ya existe"}
+{"level":40,"time":1682387805508,"pid":2000,"hostname":"DESKTOP-G8F9RK0","msg":"Le queda (84655) segundos para que la sesion se expire"}
+{"level":40,"time":1682387806049,"pid":2000,"hostname":"DESKTOP-G8F9RK0","msg":"El usuario ya existe"}
+{"level":40,"time":1682387877971,"pid":2536,"hostname":"DESKTOP-G8F9RK0","msg":"Le queda (84583) segundos para que la sesion se expire"}
+{"level":40,"time":1682387878504,"pid":2536,"hostname":"DESKTOP-G8F9RK0","msg":"El usuario ya existe"}
+{"level":40,"time":1682387883133,"pid":2536,"hostname":"DESKTOP-G8F9RK0","msg":"Le queda (84577) segundos para que la sesion se expire"}
+{"level":40,"time":1682387892014,"pid":2536,"hostname":"DESKTOP-G8F9RK0","msg":"Le queda (84568) segundos para que la sesion se expire"}
+{"level":40,"time":1682387988792,"pid":7936,"hostname":"DESKTOP-G8F9RK0","msg":"Le queda (84472) segundos para que la sesion se expire"}
+{"level":40,"time":1682387993309,"pid":7936,"hostname":"DESKTOP-G8F9RK0","msg":"Le queda (84467) segundos para que la sesion se expire"}
+{"level":40,"time":1682387993828,"pid":7936,"hostname":"DESKTOP-G8F9RK0","msg":"El usuario ya existe"}
+{"level":40,"time":1682387997670,"pid":7936,"hostname":"DESKTOP-G8F9RK0","msg":"Le queda (84463) segundos para que la sesion se expire"}
+{"level":40,"time":1682388272674,"pid":7936,"hostname":"DESKTOP-G8F9RK0","msg":"Le queda (86325) segundos para que la sesion se expire"}
+{"level":50,"time":1682388272938,"pid":7936,"hostname":"DESKTOP-G8F9RK0","msg":"No hay carrito"}
+{"level":40,"time":1682388294471,"pid":7936,"hostname":"DESKTOP-G8F9RK0","msg":"Le queda (86303) segundos para que la sesion se expire"}
+{"level":50,"time":1682388294990,"pid":7936,"hostname":"DESKTOP-G8F9RK0","msg":"no se encontró carrito para el usuario (cuevabrosPrueba205555579@gmail.com)"}
+{"level":40,"time":1682388422059,"pid":10656,"hostname":"DESKTOP-G8F9RK0","msg":"Le queda (86175) segundos para que la sesion se expire"}
+{"level":50,"time":1682388422584,"pid":10656,"hostname":"DESKTOP-G8F9RK0","msg":"no se encontró producto con ese id (undefined)"}
+{"level":40,"time":1682388431325,"pid":10656,"hostname":"DESKTOP-G8F9RK0","msg":"Le queda (86166) segundos para que la sesion se expire"}
+{"level":40,"time":1682388461182,"pid":10656,"hostname":"DESKTOP-G8F9RK0","msg":"Le queda (86381) segundos para que la sesion se expire"}
+{"level":40,"time":1682388461690,"pid":10656,"hostname":"DESKTOP-G8F9RK0","msg":"El usuario ya existe"}
+{"level":40,"time":1682388470503,"pid":10656,"hostname":"DESKTOP-G8F9RK0","msg":"Le queda (86372) segundos para que la sesion se expire"}
+{"level":40,"time":1682388500111,"pid":10656,"hostname":"DESKTOP-G8F9RK0","msg":"Le queda (86342) segundos para que la sesion se expire"}
+{"level":50,"time":1682388500365,"pid":10656,"hostname":"DESKTOP-G8F9RK0","msg":"No hay carrito"}
+{"level":40,"time":1682388505616,"pid":10656,"hostname":"DESKTOP-G8F9RK0","msg":"Le queda (86092) segundos para que la sesion se expire"}
+{"level":50,"time":1682388506125,"pid":10656,"hostname":"DESKTOP-G8F9RK0","msg":"no se encontró carrito para el usuario (cuevabrosPrueba205555579@gmail.com)"}
+{"level":40,"time":1682388513533,"pid":10656,"hostname":"DESKTOP-G8F9RK0","msg":"Le queda (86329) segundos para que la sesion se expire"}
+{"level":50,"time":1682388514042,"pid":10656,"hostname":"DESKTOP-G8F9RK0","msg":"no se encontró carrito para el usuario (cuevabros@gmail.com)"}
+{"level":40,"time":1682388544055,"pid":10656,"hostname":"DESKTOP-G8F9RK0","msg":"Le queda (86388) segundos para que la sesion se expire"}
+{"level":40,"time":1682388546294,"pid":10656,"hostname":"DESKTOP-G8F9RK0","msg":"Le queda (86386) segundos para que la sesion se expire"}
+{"level":40,"time":1682388550868,"pid":10656,"hostname":"DESKTOP-G8F9RK0","msg":"Le queda (86382) segundos para que la sesion se expire"}
+{"level":40,"time":1682388591910,"pid":10656,"hostname":"DESKTOP-G8F9RK0","msg":"Le queda (86341) segundos para que la sesion se expire"}
+{"level":50,"time":1682388592415,"pid":10656,"hostname":"DESKTOP-G8F9RK0","msg":"no se encontró producto con ese id (eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyIjp7Il9pZCI6IjRmOWExY2YzLWQ4ZTMtNDBiZC1hZWU1LTQwNDRiYjI3ZThlYyIsImVtYWlsIjoiY3VldmFicm9zUHJ1ZWJhSG95QGdtYWlsLmNvbSIsInBhc3N3b3JkIjoiJDJiJDEwJDRyRU9XbUVQZDd4TGlCaXRIZkhlVmU4V1VwaTVwUmhsMVRWWEtnT1lpZXVPRnE3am03U0JDIiwibmFtZSI6Ik1hcnRpbiIsImxhc3RuYW1lIjoiQ29pdmEiLCJpbWFnZSI6Ii9wdWJsaWMvaW1nLzIybHIuanBnIn0sImlhdCI6MTY4MjM4ODUzMywiZXhwIjoxNjgyNDc0OTMzfQ.NsZeWjtbdwPbuwy412C-vAiOprCe_8p8cq6l68_2PTU), en el carrito del usuario (cuevabrosPruebaHoy@gmail.com)"}
+{"level":40,"time":1682388605649,"pid":10656,"hostname":"DESKTOP-G8F9RK0","msg":"Le queda (86327) segundos para que la sesion se expire"}
+{"level":40,"time":1682388646344,"pid":10656,"hostname":"DESKTOP-G8F9RK0","msg":"Le queda (86286) segundos para que la sesion se expire"}
+{"level":40,"time":1682388649097,"pid":10656,"hostname":"DESKTOP-G8F9RK0","msg":"Le queda (86283) segundos para que la sesion se expire"}
+{"level":40,"time":1682388653358,"pid":10656,"hostname":"DESKTOP-G8F9RK0","msg":"Le queda (86279) segundos para que la sesion se expire"}
+{"level":50,"time":1682388653860,"pid":10656,"hostname":"DESKTOP-G8F9RK0","msg":"no se encontró producto con ese id (a2a93778-b029-4874-8f4e-4885778a610e), en el carrito del usuario (cuevabrosPruebaHoy@gmail.com)"}
+{"level":40,"time":1682391200574,"pid":5384,"hostname":"DESKTOP-G8F9RK0","msg":"Le queda (83642) segundos para que la sesion se expire"}
+{"level":50,"time":1682391200839,"pid":5384,"hostname":"DESKTOP-G8F9RK0","msg":"No hay carrito"}
+{"level":40,"time":1682391205691,"pid":5384,"hostname":"DESKTOP-G8F9RK0","msg":"Le queda (83637) segundos para que la sesion se expire"}
+{"level":50,"time":1682391206485,"pid":5384,"hostname":"DESKTOP-G8F9RK0","msg":"no se encontró producto con ese id (undefined)"}
+{"level":40,"time":1682391219642,"pid":5384,"hostname":"DESKTOP-G8F9RK0","msg":"Le queda (83623) segundos para que la sesion se expire"}
+{"level":40,"time":1682391271565,"pid":5384,"hostname":"DESKTOP-G8F9RK0","msg":"Le queda (83661) segundos para que la sesion se expire"}
+{"level":50,"time":1682391272343,"pid":5384,"hostname":"DESKTOP-G8F9RK0","msg":"no se encontró carrito para el usuario (4f9a1cf3-d8e3-40bd-aee5-4044bb27e8ec)"}
+{"level":40,"time":1682391325174,"pid":5384,"hostname":"DESKTOP-G8F9RK0","msg":"Le queda (86389) segundos para que la sesion se expire"}
+{"level":40,"time":1682391328896,"pid":5384,"hostname":"DESKTOP-G8F9RK0","msg":"Le queda (86386) segundos para que la sesion se expire"}
+{"level":40,"time":1682391341446,"pid":5384,"hostname":"DESKTOP-G8F9RK0","msg":"Le queda (86373) segundos para que la sesion se expire"}
+{"level":50,"time":1682391342015,"pid":5384,"hostname":"DESKTOP-G8F9RK0","msg":"No hay carrito"}
+{"level":40,"time":1682391476099,"pid":1872,"hostname":"DESKTOP-G8F9RK0","msg":"Le queda (86238) segundos para que la sesion se expire"}
+{"level":40,"time":1682391487623,"pid":1872,"hostname":"DESKTOP-G8F9RK0","msg":"Le queda (86227) segundos para que la sesion se expire"}
+{"level":50,"time":1682391488143,"pid":1872,"hostname":"DESKTOP-G8F9RK0","msg":"no se encontró carrito para el usuario (cuevabrosPruebaHoyP@gmail.com)"}
+{"level":40,"time":1682391610062,"pid":8684,"hostname":"DESKTOP-G8F9RK0","msg":"Le queda (86104) segundos para que la sesion se expire"}
+{"level":40,"time":1682391749181,"pid":9840,"hostname":"DESKTOP-G8F9RK0","msg":"Le queda (80639) segundos para que la sesion se expire"}
+{"level":50,"time":1682391749709,"pid":9840,"hostname":"DESKTOP-G8F9RK0","msg":"No hay carrito"}
+{"level":40,"time":1682391778146,"pid":9840,"hostname":"DESKTOP-G8F9RK0","msg":"Le queda (86384) segundos para que la sesion se expire"}
+{"level":50,"time":1682391779198,"pid":9840,"hostname":"DESKTOP-G8F9RK0","msg":"Cannot read properties of null (reading '_id')"}
+{"level":40,"time":1682392076506,"pid":2224,"hostname":"DESKTOP-G8F9RK0","msg":"Le queda (86086) segundos para que la sesion se expire"}
+{"level":40,"time":1682392164153,"pid":9248,"hostname":"DESKTOP-G8F9RK0","msg":"Le queda (85998) segundos para que la sesion se expire"}
+{"level":50,"time":1682392164668,"pid":9248,"hostname":"DESKTOP-G8F9RK0","msg":"No hay productos en el carrito"}
+{"level":40,"time":1682392212613,"pid":8392,"hostname":"DESKTOP-G8F9RK0","msg":"Le queda (85502) segundos para que la sesion se expire"}
+{"level":40,"time":1682392214448,"pid":8392,"hostname":"DESKTOP-G8F9RK0","msg":"Le queda (85500) segundos para que la sesion se expire"}
+{"level":40,"time":1682392215991,"pid":8392,"hostname":"DESKTOP-G8F9RK0","msg":"Le queda (85499) segundos para que la sesion se expire"}
+{"level":40,"time":1682392226222,"pid":8392,"hostname":"DESKTOP-G8F9RK0","msg":"Le queda (85936) segundos para que la sesion se expire"}
+{"level":40,"time":1682392307270,"pid":3880,"hostname":"DESKTOP-G8F9RK0","msg":"Le queda (85855) segundos para que la sesion se expire"}
+{"level":40,"time":1682392379414,"pid":3192,"hostname":"DESKTOP-G8F9RK0","msg":"Le queda (85783) segundos para que la sesion se expire"}
+{"level":50,"time":1682392380250,"pid":3192,"hostname":"DESKTOP-G8F9RK0","msg":"tipo invalido"}
+{"level":40,"time":1682392447448,"pid":10180,"hostname":"DESKTOP-G8F9RK0","msg":"Le queda (85715) segundos para que la sesion se expire"}
+{"level":50,"time":1682392448287,"pid":10180,"hostname":"DESKTOP-G8F9RK0","msg":"tipo invalido"}
+{"level":40,"time":1682392472995,"pid":10536,"hostname":"DESKTOP-G8F9RK0","msg":"Le queda (85690) segundos para que la sesion se expire"}
+{"level":40,"time":1682392644555,"pid":4416,"hostname":"DESKTOP-G8F9RK0","msg":"Le queda (85518) segundos para que la sesion se expire"}
+{"level":50,"time":1682392645385,"pid":4416,"hostname":"DESKTOP-G8F9RK0","msg":"Right-hand side of 'instanceof' is not an object"}
+{"level":40,"time":1682392835228,"pid":6672,"hostname":"DESKTOP-G8F9RK0","msg":"Le queda (85327) segundos para que la sesion se expire"}
+{"level":40,"time":1682392907562,"pid":6672,"hostname":"DESKTOP-G8F9RK0","msg":"Le queda (85255) segundos para que la sesion se expire"}
+{"level":40,"time":1682392981847,"pid":5764,"hostname":"DESKTOP-G8F9RK0","msg":"Le queda (85181) segundos para que la sesion se expire"}
+{"level":40,"time":1682393006475,"pid":5764,"hostname":"DESKTOP-G8F9RK0","msg":"Le queda (85156) segundos para que la sesion se expire"}
+{"level":40,"time":1682393153636,"pid":10064,"hostname":"DESKTOP-G8F9RK0","msg":"Le queda (81689) segundos para que la sesion se expire"}
+{"level":40,"time":1682393154150,"pid":10064,"hostname":"DESKTOP-G8F9RK0","msg":"El usuario ya existe"}
+{"level":40,"time":1682393162041,"pid":10064,"hostname":"DESKTOP-G8F9RK0","msg":"Le queda (81680) segundos para que la sesion se expire"}
+{"level":40,"time":1682425250222,"pid":5700,"hostname":"DESKTOP-G8F9RK0","name":"TokenExpiredError","message":"jwt expired","expiredAt":"2023-04-19T00:53:28.000Z","stack":"TokenExpiredError: jwt expired\n    at C:\\Users\\Usuario\\Desktop\\2022\\CoderHouse\\04 - Backend Página\\25 - trabajo_final\\node_modules\\jsonwebtoken\\verify.js:152:21\n    at getSecret (C:\\Users\\Usuario\\Desktop\\2022\\CoderHouse\\04 - Backend Página\\25 - trabajo_final\\node_modules\\jsonwebtoken\\verify.js:90:14)\n    at module.exports [as verify] (C:\\Users\\Usuario\\Desktop\\2022\\CoderHouse\\04 - Backend Página\\25 - trabajo_final\\node_modules\\jsonwebtoken\\verify.js:94:10)\n    at validateUser (file:///C:/Users/Usuario/Desktop/2022/CoderHouse/04%20-%20Backend%20P%C3%A1gina/25%20-%20trabajo_final/src/negocio/utils/jwt.js:8:33)\n    at autenticacion (file:///C:/Users/Usuario/Desktop/2022/CoderHouse/04%20-%20Backend%20P%C3%A1gina/25%20-%20trabajo_final/src/negocio/middlewares/autenticacion.js:19:25)\n    at Layer.handle [as handle_request] (C:\\Users\\Usuario\\Desktop\\2022\\CoderHouse\\04 - Backend Página\\25 - trabajo_final\\node_modules\\express\\lib\\router\\layer.js:95:5)\n    at next (C:\\Users\\Usuario\\Desktop\\2022\\CoderHouse\\04 - Backend Página\\25 - trabajo_final\\node_modules\\express\\lib\\router\\route.js:144:13)\n    at Route.dispatch (C:\\Users\\Usuario\\Desktop\\2022\\CoderHouse\\04 - Backend Página\\25 - trabajo_final\\node_modules\\express\\lib\\router\\route.js:114:3)\n    at Layer.handle [as handle_request] (C:\\Users\\Usuario\\Desktop\\2022\\CoderHouse\\04 - Backend Página\\25 - trabajo_final\\node_modules\\express\\lib\\router\\layer.js:95:5)\n    at C:\\Users\\Usuario\\Desktop\\2022\\CoderHouse\\04 - Backend Página\\25 - trabajo_final\\node_modules\\express\\lib\\router\\index.js:284:15","type":"Error","msg":"jwt expired"}
+{"level":40,"time":1682425262301,"pid":5700,"hostname":"DESKTOP-G8F9RK0","msg":"Le queda (52900) segundos para que la sesion se expire"}
+{"level":50,"time":1682426339702,"pid":9812,"hostname":"DESKTOP-G8F9RK0","msg":"Password incorrecto"}
+{"level":50,"time":1682426488941,"pid":9224,"hostname":"DESKTOP-G8F9RK0","msg":"Password incorrecto"}
+{"level":50,"time":1682426572974,"pid":5180,"hostname":"DESKTOP-G8F9RK0","msg":"Password incorrecto"}
+{"level":40,"time":1682426645487,"pid":6576,"hostname":"DESKTOP-G8F9RK0","msg":"Le queda (51517) segundos para que la sesion se expire"}
+{"level":40,"time":1682426684334,"pid":9424,"hostname":"DESKTOP-G8F9RK0","msg":"Le queda (51478) segundos para que la sesion se expire"}
+{"level":50,"time":1682426685470,"pid":9424,"hostname":"DESKTOP-G8F9RK0","msg":"No hay carrito"}
+{"level":40,"time":1682426695085,"pid":9424,"hostname":"DESKTOP-G8F9RK0","msg":"Le queda (51019) segundos para que la sesion se expire"}
+{"level":50,"time":1682426695657,"pid":9424,"hostname":"DESKTOP-G8F9RK0","msg":"no se encontró carrito para el usuario (undefined)"}
+{"level":40,"time":1682426710473,"pid":9424,"hostname":"DESKTOP-G8F9RK0","msg":"Le queda (51452) segundos para que la sesion se expire"}
+{"level":50,"time":1682426710758,"pid":9424,"hostname":"DESKTOP-G8F9RK0","msg":"No hay carrito"}
+{"level":40,"time":1682426729273,"pid":9424,"hostname":"DESKTOP-G8F9RK0","msg":"Le queda (86387) segundos para que la sesion se expire"}
+{"level":50,"time":1682426731469,"pid":9424,"hostname":"DESKTOP-G8F9RK0","msg":"no se encontró carrito para el usuario (undefined)"}
+{"level":40,"time":1682426781674,"pid":9232,"hostname":"DESKTOP-G8F9RK0","msg":"Le queda (86335) segundos para que la sesion se expire"}
+{"level":50,"time":1682426782514,"pid":9232,"hostname":"DESKTOP-G8F9RK0","msg":"no se encontró carrito para el usuario (undefined)"}
+{"level":40,"time":1682427397696,"pid":8516,"hostname":"DESKTOP-G8F9RK0","msg":"Le queda (85719) segundos para que la sesion se expire"}
+{"level":50,"time":1682427398315,"pid":8516,"hostname":"DESKTOP-G8F9RK0","msg":"no se encontró carrito para el usuario (aa3cb324-dd6c-410f-a145-924d7039fd3c)"}
+{"level":50,"time":1682429885755,"pid":4160,"hostname":"DESKTOP-G8F9RK0","msg":"Password incorrecto"}
+{"level":50,"time":1682429893169,"pid":4160,"hostname":"DESKTOP-G8F9RK0","msg":"Usuario inexistente"}
+{"level":40,"time":1682429925848,"pid":4160,"hostname":"DESKTOP-G8F9RK0","msg":"Le queda (83191) segundos para que la sesion se expire"}
+{"level":50,"time":1682429926349,"pid":4160,"hostname":"DESKTOP-G8F9RK0","msg":"no se encontró carrito para el usuario (aa3cb324-dd6c-410f-a145-924d7039fd3c)"}
+{"level":40,"time":1682430070394,"pid":4160,"hostname":"DESKTOP-G8F9RK0","msg":"Le queda (83046) segundos para que la sesion se expire"}
+{"level":50,"time":1682430070899,"pid":4160,"hostname":"DESKTOP-G8F9RK0","msg":"no se encontró carrito para el usuario (aa3cb324-dd6c-410f-a145-924d7039fd3c)"}
+{"level":40,"time":1682430148038,"pid":4464,"hostname":"DESKTOP-G8F9RK0","msg":"Le queda (82968) segundos para que la sesion se expire"}
+{"level":50,"time":1682430148593,"pid":4464,"hostname":"DESKTOP-G8F9RK0","msg":"no se encontró carrito para el usuario (aa3cb324-dd6c-410f-a145-924d7039fd3c)"}
+{"level":40,"time":1682430223065,"pid":4464,"hostname":"DESKTOP-G8F9RK0","msg":"Le queda (86387) segundos para que la sesion se expire"}
+{"level":50,"time":1682430223583,"pid":4464,"hostname":"DESKTOP-G8F9RK0","msg":"no se encontró carrito para el usuario (aa3cb324-dd6c-410f-a145-924d7039fd3c)"}
+{"level":40,"time":1682430299545,"pid":4464,"hostname":"DESKTOP-G8F9RK0","msg":"Le queda (86383) segundos para que la sesion se expire"}
+{"level":40,"time":1682430309196,"pid":4464,"hostname":"DESKTOP-G8F9RK0","msg":"Le queda (86373) segundos para que la sesion se expire"}
+{"level":40,"time":1682430315517,"pid":4464,"hostname":"DESKTOP-G8F9RK0","msg":"Le queda (86367) segundos para que la sesion se expire"}
+{"level":50,"time":1682430315772,"pid":4464,"hostname":"DESKTOP-G8F9RK0","msg":"No hay carrito"}
+{"level":40,"time":1682430344828,"pid":2488,"hostname":"DESKTOP-G8F9RK0","msg":"Le queda (86338) segundos para que la sesion se expire"}
+{"level":40,"time":1682430395639,"pid":10420,"hostname":"DESKTOP-G8F9RK0","msg":"Le queda (86287) segundos para que la sesion se expire"}
+{"level":40,"time":1682430401840,"pid":10420,"hostname":"DESKTOP-G8F9RK0","msg":"Le queda (86281) segundos para que la sesion se expire"}
+{"level":40,"time":1682430404245,"pid":10420,"hostname":"DESKTOP-G8F9RK0","msg":"Le queda (86278) segundos para que la sesion se expire"}
+{"level":50,"time":1682430404496,"pid":10420,"hostname":"DESKTOP-G8F9RK0","msg":"el carrito para el usuario (b7aff4a2-4637-4812-b987-facd5bf55115) no tiene productos"}
+{"level":40,"time":1682430440943,"pid":10420,"hostname":"DESKTOP-G8F9RK0","msg":"Le queda (85856) segundos para que la sesion se expire"}
+{"level":40,"time":1682430465990,"pid":10420,"hostname":"DESKTOP-G8F9RK0","msg":"Le queda (86385) segundos para que la sesion se expire"}
+{"level":40,"time":1682430499230,"pid":10420,"hostname":"DESKTOP-G8F9RK0","msg":"Le queda (86351) segundos para que la sesion se expire"}
+{"level":40,"time":1682430593872,"pid":10588,"hostname":"DESKTOP-G8F9RK0","msg":"Le queda (86257) segundos para que la sesion se expire"}
+{"level":40,"time":1682430801552,"pid":10224,"hostname":"DESKTOP-G8F9RK0","msg":"Le queda (86049) segundos para que la sesion se expire"}
+{"level":50,"time":1682430801555,"pid":10224,"hostname":"DESKTOP-G8F9RK0","msg":"User.buscar_usuario_x_id is not a function"}
+{"level":40,"time":1682430896383,"pid":11068,"hostname":"DESKTOP-G8F9RK0","msg":"Le queda (85954) segundos para que la sesion se expire"}
+{"level":40,"time":1682431062134,"pid":9748,"hostname":"DESKTOP-G8F9RK0","msg":"Le queda (85788) segundos para que la sesion se expire"}
+{"level":50,"time":1682431065906,"pid":9748,"hostname":"DESKTOP-G8F9RK0","msg":"Usuario inexistente"}
+{"level":50,"time":1682431125462,"pid":8476,"hostname":"DESKTOP-G8F9RK0","msg":"Usuario inexistente"}
+{"level":50,"time":1682431186721,"pid":8476,"hostname":"DESKTOP-G8F9RK0","msg":"Usuario inexistente"}
+{"level":40,"time":1682450478382,"pid":1900,"hostname":"DESKTOP-G8F9RK0","msg":"Le queda (27684) segundos para que la sesion se expire"}
+{"level":40,"time":1682450966910,"pid":11136,"hostname":"DESKTOP-G8F9RK0","msg":"Le queda (27196) segundos para que la sesion se expire"}
+{"level":40,"time":1682451422050,"pid":10668,"hostname":"DESKTOP-G8F9RK0","msg":"Le queda (26740) segundos para que la sesion se expire"}
+{"level":40,"time":1682451456256,"pid":10668,"hostname":"DESKTOP-G8F9RK0","msg":"Le queda (86384) segundos para que la sesion se expire"}
+{"level":40,"time":1682452109319,"pid":6372,"hostname":"DESKTOP-G8F9RK0","msg":"Le queda (64741) segundos para que la sesion se expire"}
+{"level":40,"time":1682452134096,"pid":6372,"hostname":"DESKTOP-G8F9RK0","msg":"Le queda (64716) segundos para que la sesion se expire"}
+{"level":50,"time":1682452134359,"pid":6372,"hostname":"DESKTOP-G8F9RK0","msg":"No hay carrito"}
+{"level":40,"time":1682452142691,"pid":6372,"hostname":"DESKTOP-G8F9RK0","msg":"Le queda (64540) segundos para que la sesion se expire"}
+{"level":40,"time":1682452144392,"pid":6372,"hostname":"DESKTOP-G8F9RK0","msg":"Le queda (64538) segundos para que la sesion se expire"}
+{"level":40,"time":1682452148328,"pid":6372,"hostname":"DESKTOP-G8F9RK0","msg":"Le queda (64702) segundos para que la sesion se expire"}
+{"level":50,"time":1682452148583,"pid":6372,"hostname":"DESKTOP-G8F9RK0","msg":"No hay carrito"}
+{"level":40,"time":1682452169291,"pid":6372,"hostname":"DESKTOP-G8F9RK0","msg":"Le queda (85671) segundos para que la sesion se expire"}
+{"level":40,"time":1682452171066,"pid":6372,"hostname":"DESKTOP-G8F9RK0","msg":"Le queda (85669) segundos para que la sesion se expire"}
+{"level":40,"time":1682452174754,"pid":6372,"hostname":"DESKTOP-G8F9RK0","msg":"Le queda (64676) segundos para que la sesion se expire"}
+{"level":50,"time":1682452175008,"pid":6372,"hostname":"DESKTOP-G8F9RK0","msg":"No hay carrito"}
+{"level":40,"time":1682452192080,"pid":6372,"hostname":"DESKTOP-G8F9RK0","msg":"Le queda (85648) segundos para que la sesion se expire"}
+{"level":40,"time":1682452261809,"pid":6372,"hostname":"DESKTOP-G8F9RK0","msg":"Le queda (18332) segundos para que la sesion se expire"}
+{"level":40,"time":1682452265599,"pid":6372,"hostname":"DESKTOP-G8F9RK0","msg":"Le queda (18328) segundos para que la sesion se expire"}
+{"level":40,"time":1682452274826,"pid":6372,"hostname":"DESKTOP-G8F9RK0","msg":"Le queda (18319) segundos para que la sesion se expire"}
+{"level":40,"time":1682452282517,"pid":6372,"hostname":"DESKTOP-G8F9RK0","msg":"Le queda (18311) segundos para que la sesion se expire"}
+{"level":40,"time":1682452291203,"pid":6372,"hostname":"DESKTOP-G8F9RK0","msg":"Le queda (18302) segundos para que la sesion se expire"}
+{"level":40,"time":1682452291456,"pid":6372,"hostname":"DESKTOP-G8F9RK0","msg":"no se encontró producto con ese id (a4d704cc-8019-487a-95a2-019008faac34)"}
+{"level":40,"time":1682452295026,"pid":6372,"hostname":"DESKTOP-G8F9RK0","msg":"Le queda (18298) segundos para que la sesion se expire"}
+{"level":40,"time":1682452295281,"pid":6372,"hostname":"DESKTOP-G8F9RK0","msg":"no se encontró producto con ese id (a4d704cc-8019-487a-95a2-019008faac34)"}
+{"level":40,"time":1682452299688,"pid":6372,"hostname":"DESKTOP-G8F9RK0","msg":"Le queda (18294) segundos para que la sesion se expire"}
+{"level":40,"time":1682452299945,"pid":6372,"hostname":"DESKTOP-G8F9RK0","msg":"no se encontró producto con ese id (a4d704cc-8019-487a-95a2-019008faac34)"}
+{"level":40,"time":1682452306007,"pid":6372,"hostname":"DESKTOP-G8F9RK0","msg":"Le queda (18287) segundos para que la sesion se expire"}
+{"level":40,"time":1682452440348,"pid":6372,"hostname":"DESKTOP-G8F9RK0","msg":"Le queda (18153) segundos para que la sesion se expire"}
+{"level":50,"time":1682452440603,"pid":6372,"hostname":"DESKTOP-G8F9RK0","msg":"user is not defined"}
+{"level":40,"time":1682452474200,"pid":1192,"hostname":"DESKTOP-G8F9RK0","msg":"Le queda (18119) segundos para que la sesion se expire"}
+{"level":50,"time":1682452474460,"pid":1192,"hostname":"DESKTOP-G8F9RK0","msg":"user is not defined"}
+{"level":40,"time":1682452538545,"pid":3944,"hostname":"DESKTOP-G8F9RK0","msg":"Le queda (18055) segundos para que la sesion se expire"}
+{"level":50,"time":1682452540024,"pid":3944,"hostname":"DESKTOP-G8F9RK0","msg":"No existen ordenes del usuario b3c0bc57-a174-431c-a46e-7b5599105657"}
+{"level":40,"time":1682452888948,"pid":3944,"hostname":"DESKTOP-G8F9RK0","msg":"Le queda (84952) segundos para que la sesion se expire"}
+{"level":40,"time":1682452914698,"pid":3944,"hostname":"DESKTOP-G8F9RK0","msg":"Le queda (86383) segundos para que la sesion se expire"}
+{"level":50,"time":1682452914953,"pid":3944,"hostname":"DESKTOP-G8F9RK0","msg":"No existen ordenes del usuario aa3cb324-dd6c-410f-a145-924d7039fd3c"}
+{"level":40,"time":1682452952598,"pid":3944,"hostname":"DESKTOP-G8F9RK0","msg":"Le queda (84888) segundos para que la sesion se expire"}
+{"level":50,"time":1682452953115,"pid":3944,"hostname":"DESKTOP-G8F9RK0","msg":"no se encontró producto con ese id (undefined)"}
+{"level":40,"time":1682452970676,"pid":3944,"hostname":"DESKTOP-G8F9RK0","msg":"Le queda (86327) segundos para que la sesion se expire"}
+{"level":50,"time":1682452971194,"pid":3944,"hostname":"DESKTOP-G8F9RK0","msg":"no se encontró carrito para el usuario (aa3cb324-dd6c-410f-a145-924d7039fd3c)"}
+{"level":40,"time":1682453072875,"pid":3944,"hostname":"DESKTOP-G8F9RK0","msg":"Le queda (86225) segundos para que la sesion se expire"}
+{"level":50,"time":1682453073130,"pid":3944,"hostname":"DESKTOP-G8F9RK0","msg":"No hay carrito"}
+{"level":40,"time":1682453073575,"pid":3944,"hostname":"DESKTOP-G8F9RK0","msg":"Le queda (86224) segundos para que la sesion se expire"}
+{"level":50,"time":1682453073834,"pid":3944,"hostname":"DESKTOP-G8F9RK0","msg":"No hay carrito"}
+{"level":40,"time":1682453095145,"pid":3944,"hostname":"DESKTOP-G8F9RK0","msg":"Le queda (86383) segundos para que la sesion se expire"}
+{"level":50,"time":1682453095667,"pid":3944,"hostname":"DESKTOP-G8F9RK0","msg":"no se encontró carrito para el usuario (4dbcaa33-6810-4cb1-8858-22987ab7a911)"}
+{"level":40,"time":1682453154180,"pid":3944,"hostname":"DESKTOP-G8F9RK0","msg":"Le queda (84686) segundos para que la sesion se expire"}
+{"level":40,"time":1682453176310,"pid":3944,"hostname":"DESKTOP-G8F9RK0","msg":"Le queda (86385) segundos para que la sesion se expire"}
+{"level":40,"time":1682453176565,"pid":3944,"hostname":"DESKTOP-G8F9RK0","msg":"El usuario ya existe"}
+{"level":40,"time":1682453189641,"pid":3944,"hostname":"DESKTOP-G8F9RK0","msg":"Le queda (86372) segundos para que la sesion se expire"}
+{"level":40,"time":1682453217302,"pid":3944,"hostname":"DESKTOP-G8F9RK0","msg":"Le queda (86344) segundos para que la sesion se expire"}
+{"level":40,"time":1682453217558,"pid":3944,"hostname":"DESKTOP-G8F9RK0","msg":"El usuario ya existe"}
+{"level":40,"time":1682453221808,"pid":3944,"hostname":"DESKTOP-G8F9RK0","msg":"Le queda (86340) segundos para que la sesion se expire"}
+{"level":40,"time":1682453273986,"pid":3944,"hostname":"DESKTOP-G8F9RK0","msg":"Le queda (86382) segundos para que la sesion se expire"}
+{"level":40,"time":1682453276054,"pid":3944,"hostname":"DESKTOP-G8F9RK0","msg":"Le queda (86379) segundos para que la sesion se expire"}
+{"level":40,"time":1682453288376,"pid":3944,"hostname":"DESKTOP-G8F9RK0","msg":"Le queda (86367) segundos para que la sesion se expire"}
+{"level":50,"time":1682453288631,"pid":3944,"hostname":"DESKTOP-G8F9RK0","msg":"No hay carrito"}
+{"level":40,"time":1682453299007,"pid":3944,"hostname":"DESKTOP-G8F9RK0","msg":"Le queda (86356) segundos para que la sesion se expire"}
+{"level":50,"time":1682453299262,"pid":3944,"hostname":"DESKTOP-G8F9RK0","msg":"No hay carrito"}
+{"level":40,"time":1682453303449,"pid":3944,"hostname":"DESKTOP-G8F9RK0","msg":"Le queda (86352) segundos para que la sesion se expire"}
+{"level":50,"time":1682453303705,"pid":3944,"hostname":"DESKTOP-G8F9RK0","msg":"No existen ordenes del usuario 92991dcc-93da-4c44-9a44-e64d3922aacb"}
+{"level":40,"time":1682453331014,"pid":3944,"hostname":"DESKTOP-G8F9RK0","msg":"Le queda (86324) segundos para que la sesion se expire"}
+{"level":40,"time":1682453349055,"pid":3944,"hostname":"DESKTOP-G8F9RK0","msg":"Le queda (86306) segundos para que la sesion se expire"}
+{"level":40,"time":1682453357240,"pid":3944,"hostname":"DESKTOP-G8F9RK0","msg":"Le queda (86298) segundos para que la sesion se expire"}
+{"level":50,"time":1682453357495,"pid":3944,"hostname":"DESKTOP-G8F9RK0","msg":"No existen ordenes del usuario 92991dcc-93da-4c44-9a44-e64d3922aacb"}
+{"level":40,"time":1682453362192,"pid":3944,"hostname":"DESKTOP-G8F9RK0","msg":"Le queda (86293) segundos para que la sesion se expire"}
+{"level":50,"time":1682453362446,"pid":3944,"hostname":"DESKTOP-G8F9RK0","msg":"No hay carrito"}
+{"level":40,"time":1682453426661,"pid":5844,"hostname":"DESKTOP-G8F9RK0","msg":"Le queda (86229) segundos para que la sesion se expire"}
+{"level":50,"time":1682453427747,"pid":5844,"hostname":"DESKTOP-G8F9RK0","msg":"no existe carrito para el usuario (undefined)"}
+{"level":40,"time":1682453446116,"pid":5844,"hostname":"DESKTOP-G8F9RK0","msg":"Le queda (86209) segundos para que la sesion se expire"}
+{"level":40,"time":1682453519699,"pid":2312,"hostname":"DESKTOP-G8F9RK0","msg":"Le queda (86136) segundos para que la sesion se expire"}
+{"level":50,"time":1682453520864,"pid":2312,"hostname":"DESKTOP-G8F9RK0","msg":"no existe carrito para el usuario (undefined)"}
+{"level":40,"time":1682453760553,"pid":3160,"hostname":"DESKTOP-G8F9RK0","msg":"Le queda (85895) segundos para que la sesion se expire"}
+{"level":50,"time":1682453760820,"pid":3160,"hostname":"DESKTOP-G8F9RK0","msg":"No hay carrito"}
+{"level":40,"time":1682453773268,"pid":3160,"hostname":"DESKTOP-G8F9RK0","msg":"Le queda (85882) segundos para que la sesion se expire"}
+{"level":40,"time":1682453811944,"pid":3160,"hostname":"DESKTOP-G8F9RK0","msg":"Le queda (85844) segundos para que la sesion se expire"}
+{"level":50,"time":1682453812213,"pid":3160,"hostname":"DESKTOP-G8F9RK0","msg":"No hay carrito"}
+{"level":40,"time":1682453823260,"pid":8052,"hostname":"DESKTOP-G8F9RK0","msg":"Le queda (85832) segundos para que la sesion se expire"}
+{"level":40,"time":1682453832555,"pid":8052,"hostname":"DESKTOP-G8F9RK0","msg":"Le queda (85823) segundos para que la sesion se expire"}
+{"level":50,"time":1682453832811,"pid":8052,"hostname":"DESKTOP-G8F9RK0","msg":"No existen ordenes del usuario 92991dcc-93da-4c44-9a44-e64d3922aacb"}
+{"level":40,"time":1682453836792,"pid":8052,"hostname":"DESKTOP-G8F9RK0","msg":"Le queda (85819) segundos para que la sesion se expire"}
+{"level":50,"time":1682453837861,"pid":8052,"hostname":"DESKTOP-G8F9RK0","msg":"no existe carrito para el usuario (undefined)"}
+{"level":40,"time":1682453994100,"pid":8012,"hostname":"DESKTOP-G8F9RK0","msg":"Le queda (85661) segundos para que la sesion se expire"}
+{"level":50,"time":1682453994366,"pid":8012,"hostname":"DESKTOP-G8F9RK0","msg":"No existen ordenes del usuario 92991dcc-93da-4c44-9a44-e64d3922aacb"}
+{"level":40,"time":1682454001565,"pid":8012,"hostname":"DESKTOP-G8F9RK0","msg":"Le queda (85654) segundos para que la sesion se expire"}
+{"level":40,"time":1682454026250,"pid":8012,"hostname":"DESKTOP-G8F9RK0","msg":"Le queda (85629) segundos para que la sesion se expire"}
+{"level":50,"time":1682454026505,"pid":8012,"hostname":"DESKTOP-G8F9RK0","msg":"No existen ordenes del usuario 92991dcc-93da-4c44-9a44-e64d3922aacb"}
+{"level":40,"time":1682454113984,"pid":7992,"hostname":"DESKTOP-G8F9RK0","msg":"Le queda (85542) segundos para que la sesion se expire"}
+{"level":40,"time":1682457091453,"pid":9112,"hostname":"DESKTOP-G8F9RK0","msg":"Le queda (13502) segundos para que la sesion se expire"}
+{"level":40,"time":1682457253550,"pid":10276,"hostname":"DESKTOP-G8F9RK0","msg":"Le queda (13340) segundos para que la sesion se expire"}
+{"level":40,"time":1682460484235,"pid":9960,"hostname":"DESKTOP-G8F9RK0","msg":"Le queda (10109) segundos para que la sesion se expire"}

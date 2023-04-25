@@ -1,7 +1,6 @@
 import Odernes from '../models/orders.js'
 import Productos from '../models/product.js';
 import { Orders } from '../repository/order/index.js';
-import { userService } from './user.service.js';
 import { cartService } from './cart.service.js';
 import { productService } from '../../negocio/services/product.service.js';
 import nodemailer from '../../negocio/utils/nodemailer.js'
@@ -10,18 +9,16 @@ import {EMAILADMIN} from '../../config/config.js'
 
 class OrderService {
 
-    async grabarOrden(user) {
-     
-        const productsCart = await cartService.listarCarritoUsuario(user)
+    async grabarOrden(usuario) {
+
+        const productsCart = await cartService.listarCarritoUsuario(usuario)
 
         if(!productsCart) 
-            throw new Error (`El Usuario ${user} no tiene carrito`) 
+            throw new Error (`El Usuario ${usuario._id} no tiene carrito`) 
 
         if(!productsCart.productos[0])
-          throw new Error (`No hay productos en el carrito del usuario ${user}`) 
+            throw new Error (`No hay productos en el carrito del usuario ${usuario._id}`) 
             
-
-            const usuario = await userService.buscar_usuario(user)
             var f = new Date();
             const fecha = f.toLocaleString();
    
@@ -47,7 +44,7 @@ class OrderService {
             const registroOrder = await Orders.grabarOrden(order)   
 
             //Vacio el carrito
-            await cartService.eliminarCarrito(usuario.email)
+            await cartService.eliminarCarrito(usuario)
             
             //Envio correos, al Admin y al Usuario Comprador
            let html="<h1>Lista de Productos Comprados <br></h1>"
@@ -67,7 +64,7 @@ class OrderService {
            html = html + `<strong>Su pedido #${nrocomprobante} está en proceso.</strong>`
            await nodemailer("Mailer", usuario.email, "Pedido #" + nrocomprobante + " en Proceso" , html, null)
 
-          return registroOrder.prods  
+          return registroOrder  
 
     }
 
@@ -80,7 +77,7 @@ class OrderService {
                     });
                     return orders
                 } else
-                    throw new Error (`No existen ordenes del usuario ${user}`)
+                    throw new Error (`No existen ordenes del usuario ${usuario._id}`)
     }
 
 

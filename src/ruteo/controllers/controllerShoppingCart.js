@@ -10,7 +10,7 @@ async function controladorPostItemProducts(req, res) {
     res.status(201).json(carrito)
   } catch (error) {
     loggerError(error.message)
-    res.json({error: error.message})
+    res.status(404).json({error: error.message})
   }
 
 }
@@ -24,7 +24,7 @@ async function controladorGetItems(req, res) {
     res.status(200).json(Items.productos)
   } catch (error) {
     loggerError(error.message)
-    res.json({error: error.message})
+    res.status(404).json({error: error.message})
   }
 
 } 
@@ -38,7 +38,7 @@ async function controladorDeleteItems(req, res) {
     res.status(200).json(resul)
   } catch (error) {
     loggerError(error.message)
-    res.json({error: error.message})
+    res.status(404).json({error: error.message})
   }
 
 }
@@ -51,7 +51,7 @@ async function controladorDeleteItemsSegunIdProducts(req, res) {
     res.status(201).json(borrados)
   } catch (error) {
     loggerError(error.message)
-    res.json({error: error.message})
+    res.status(404).json({error: error.message})
   }
 
 }

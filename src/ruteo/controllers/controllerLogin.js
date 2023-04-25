@@ -29,7 +29,7 @@ async function controladorLoginp(req, res) {
     mensaje = "Usuario inexistente"
     
     if(usuario)
-     if(!validatePassword(usuario, req.body.password))
+     if(!validatePassword(usuario.password, req.body.password))
       mensaje = "Password incorrecto"
 
   if(mensaje === "") {
