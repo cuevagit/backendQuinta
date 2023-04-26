@@ -14,10 +14,10 @@ class OrderService {
         const productsCart = await cartService.listarCarritoUsuario(usuario)
 
         if(!productsCart) 
-            throw new Error (`El Usuario ${usuario._id} no tiene carrito`) 
+            throw new Error (`El Usuario ${usuario.email} no tiene carrito`) 
 
         if(!productsCart.productos[0])
-            throw new Error (`No hay productos en el carrito del usuario ${usuario._id}`) 
+            throw new Error (`No hay productos en el carrito del usuario ${usuario.email}`) 
             
             var f = new Date();
             const fecha = f.toLocaleString();
@@ -47,21 +47,20 @@ class OrderService {
             await cartService.eliminarCarrito(usuario)
             
             //Envio correos, al Admin y al Usuario Comprador
-           let html="<h1>Lista de Productos Comprados <br></h1>"
+           let html = ""
+           html="<h1>Lista de Productos Comprados <br></h1>"
            for(let j=0; j<order.prods.length; j++ ){
              html = html + `<strong style="color: blue">Nombre: </strong>${order.prods[j].prod.name} <br> <strong style="color: blue"> Descripción: </strong> ${order.prods[j].prod.description} <br> <strong style="color: blue"> Precio: </strong>  ${order.prods[j].prod.price} <br> <strong style="color: blue"> Cantidad: </strong>  ${order.prods[j].cant}<br> <strong style="color: blue"></strong> <img width="70px" src=${order.prods[j].prod.image} alt="Foto" <br><br><br>`
             };
-            
+
             //Se notifica al Admin
             await nodemailer("Mailer", EMAILADMIN, "nuevo venta, compra hecha por " + usuario.lastname + ", " + usuario.name + " - " + usuario.email , html, null)
-            html = ""
             const nrocomprobante = Math.floor(Math.random()*999999);
-            html = html + `<strong>El númerp de comprobante es: #${nrocomprobante}.</strong>`
+            html = html + `<strong>El número de comprobante es: #${nrocomprobante}.</strong>`
             await nodemailer("Mailer", usuario.email, "Pedido #" + nrocomprobante + " en Proceso" , html, null)
     
            //Se notifica al Usuario Comprador
            await nodemailer("Mailer", usuario.email, "nuevo pedido, " + usuario.lastname + ", " + usuario.name + " - " + usuario.email , html, null)
-           html = ""
            html = html + `<strong>Su pedido #${nrocomprobante} está en proceso.</strong>`
            await nodemailer("Mailer", usuario.email, "Pedido #" + nrocomprobante + " en Proceso" , html, null)
 
@@ -78,7 +77,7 @@ class OrderService {
                     });
                     return orders
                 } else
-                    throw new Error (`No existen ordenes del usuario ${usuario._id}`)
+                    throw new Error (`No existen ordenes del usuario ${usuario.email}`)
     }
 
 

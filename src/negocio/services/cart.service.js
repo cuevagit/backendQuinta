@@ -13,7 +13,7 @@ class CartService {
         const Prods = await productService.listarProducto();
     
         if(!Items)
-          throw new Error ("No hay carritos")
+            throw new Error ("No hay carritos")
     
         if(!Prods)
             throw new Error ("No hay productos") 
@@ -26,7 +26,7 @@ class CartService {
         const indiceBuscado = Items.findIndex(c => c.usuario === user._id);
 
         if (indiceBuscado === -1) 
-            throw new Error (`no se encontró carrito para el usuario (${user._id})`);
+            throw new Error (`no se encontró carrito para el usuario (${user.email})`);
 
         let producto = Items[indiceBuscado].productos.find(p => p.idProd === idProd)
                     
@@ -109,12 +109,12 @@ class CartService {
         let indiceBuscadoProd
       
         if (indiceBuscadoCart === -1) 
-            throw new Error(`no se encontró carrito para el usuario (${user._id})`);
+            throw new Error(`no se encontró carrito para el usuario (${user.email})`);
        
         indiceBuscadoProd = Items[indiceBuscadoCart].productos.findIndex(p => p.idProd === idProd);
 
         if (indiceBuscadoProd === -1) 
-           throw new Error(`no se encontró producto con ese id (${idProd}), en el carrito del usuario (${user._id})`)         
+           throw new Error(`no se encontró producto con ese id (${idProd}), en el carrito del usuario (${user.email})`)         
 
         if (Items[indiceBuscadoCart].productos.find(p => p.idProd === idProd).cant > 1) {
             Items[indiceBuscadoCart].productos.find(p => p.idProd === idProd).cant--
@@ -140,10 +140,10 @@ class CartService {
         const indiceBuscado = Items.findIndex(c => c.usuario === usuario._id);
       
         if (indiceBuscado === -1) 
-            throw new Error(`no existe carrito para el usuario (${usuario._id})`);
+            throw new Error(`no existe carrito para el usuario (${usuario.email})`);
 
         if(!Items[indiceBuscado].productos[0]) 
-            throw new Error(`el carrito para el usuario (${usuario._id}) no tiene productos`);
+            throw new Error(`el carrito para el usuario (${usuario.email}) no tiene productos`);
 
         const borrados = Items[indiceBuscado].productos
 
