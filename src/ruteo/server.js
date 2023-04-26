@@ -27,7 +27,6 @@ servidor.use('/api/shoppingcartproducts', routerApiShoppingCart)
 servidor.use('/api/images', routerImage)
 servidor.use('/api/orders', routerApiOrders)
 servidor.use(express.static('public/img'))
-//servidor.use((err, req, res, next) => loggerError(err.message));
 
 //multer
 multer_function()

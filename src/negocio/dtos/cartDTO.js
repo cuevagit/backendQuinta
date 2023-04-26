@@ -9,6 +9,8 @@ export class CartDto {
         if (!usuario) throw new Error('parametro requerido')
         this.usuario = usuario
 
+        if (!typeof productos instanceof Array) throw new Error('tipo invalido')
+        if (!productos) throw new Error('parametro requerido')
         this.productos = productos
         
     }

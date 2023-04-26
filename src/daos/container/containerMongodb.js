@@ -9,7 +9,6 @@ class ContainerMongodb{
     }
 
     
-
     //PRODUCTOS y CARRITO 
     async save(objeto){
  
@@ -24,16 +23,16 @@ class ContainerMongodb{
       }
 
 
-    //PRODUCTOS y CARRITO
+    //CARRITO
     async getByIdUser(usuario){
        
         try {
 
             const carrito = await this.coleccion.find({usuario: usuario}).toArray()
 
-            if(!carrito){
+            if (!carrito){
                 return null
-            }else{
+            } else {
                 return carrito [0];
             }
             
@@ -43,7 +42,7 @@ class ContainerMongodb{
             return error
         } 
 
-     }
+    }
 
 
 
@@ -53,16 +52,16 @@ class ContainerMongodb{
 
             const objetoBuscado = await this.coleccion.find({_id: id}).toArray()
 
-            if(objetoBuscado[0]===undefined){
+            if (objetoBuscado[0]===undefined){
                 return null
-            }else{
+            } else {
                 return objetoBuscado[0];
             }
             
         }
 
         catch(error){
-            error => { throw error}
+            return error
         } 
 
      }
@@ -75,9 +74,9 @@ class ContainerMongodb{
 
             const objetoBuscado = await this.coleccion.find({}).toArray()
 
-            if(objetoBuscado===undefined){
+            if (objetoBuscado===undefined) {
                 return null
-            }else{
+            } else {
                 return objetoBuscado;
             }
             

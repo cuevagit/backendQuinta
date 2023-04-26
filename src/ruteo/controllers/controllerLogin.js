@@ -5,17 +5,6 @@ import {userService} from '../../negocio/services/user.service.js'
 import { createToken } from '../../negocio/utils/jwt.js';
 import { validatePassword } from '../../negocio/utils/bcrypt.js';
 
-
- 
- function controladorLogout(req, res) {
-  if(req.user) { 
-    req.destroy();
-    res.status(200).json({"mensaje": "Usuario deslogueado"})
-  } else {
-    loggerWarn({"mensaje": "No hay Usuario logueado"})
-    res.json({"mensaje": "No hay Usuario logueado"})
-  }
-}
    
 
 async function controladorLoginp(req, res) {
@@ -47,4 +36,4 @@ async function controladorLoginp(req, res) {
 
  
   
-export {controladorLoginp, controladorLogout}
+export {controladorLoginp}

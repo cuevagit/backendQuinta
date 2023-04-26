@@ -1,5 +1,5 @@
 import {PERSISTENCIA} from '../../../config/config.js'
-import { cart } from '../cart/cart.js'
+import { cart } from './cart.js'
 
 let Cart
 

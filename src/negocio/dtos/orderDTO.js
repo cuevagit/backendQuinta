@@ -14,6 +14,8 @@ export class OrderDto {
         if (!idCliente) throw new Error('parametro requerido')
         this.idCliente = idCliente
 
+        if (!typeof prods instanceof Array) throw new Error('tipo invalido')
+        if (!prods) throw new Error('parametro requerido')
         this.prods = prods
         
     }

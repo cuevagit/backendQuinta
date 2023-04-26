@@ -51,6 +51,7 @@ class OrderService {
            for(let j=0; j<order.prods.length; j++ ){
              html = html + `<strong style="color: blue">Nombre: </strong>${order.prods[j].prod.name} <br> <strong style="color: blue"> Descripción: </strong> ${order.prods[j].prod.description} <br> <strong style="color: blue"> Precio: </strong>  ${order.prods[j].prod.price} <br> <strong style="color: blue"> Cantidad: </strong>  ${order.prods[j].cant}<br> <strong style="color: blue"></strong> <img width="70px" src=${order.prods[j].prod.image} alt="Foto" <br><br><br>`
             };
+            
             //Se notifica al Admin
             await nodemailer("Mailer", EMAILADMIN, "nuevo venta, compra hecha por " + usuario.lastname + ", " + usuario.name + " - " + usuario.email , html, null)
             html = ""

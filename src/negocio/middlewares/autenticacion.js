@@ -8,7 +8,6 @@ export function autenticacion(req, res, next) {
     const authorizationHeader = req.headers.authorization  
 
     if (!authorizationHeader) {
-        //next(new ErrorDeAutenticacion())
       res.status(401).json({mensaje: "No está logueado"})
       return "No está logueado"
     }
@@ -24,7 +23,7 @@ export function autenticacion(req, res, next) {
     req.user = user
     next()
   } catch (error) {
-    loggerWarn(error) 
+      loggerWarn(error) 
   }
       
   }

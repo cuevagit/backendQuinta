@@ -12,7 +12,6 @@ export const USERDB=process.env.USERDB
 export const MONGOCONECTION=MONGOCONECTIONSEGUNENVIRONMENT
 export const MONGODB=process.env.MONGODB
 export const PERSISTENCIA=process.env.PERSISTENCIA
-export const SECRETKEY=process.env.SECRETKEY
 export const SALTENV=process.env.SALTENV
 export const NODE_ENV=process.env.NODE_ENV
 export const MODO_POR_DEFECTO=process.env.MODO_POR_DEFECTO

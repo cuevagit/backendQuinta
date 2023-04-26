@@ -61,12 +61,13 @@ class CartService {
     async listarCarrito() {
 
         try {
-                const listadoCarts = await Cart.listarCarrito()
-                if(listadoCarts){
-                    const carts = []
-                    listadoCarts.forEach(d => {
-                        carts.push(d.datos())
-                    });
+            const listadoCarts = await Cart.listarCarrito()
+                
+            if(listadoCarts){
+                const carts = []
+                listadoCarts.forEach(d => {
+                    carts.push(d.datos())
+                });
                     return carts
                 } else
                     return null
@@ -134,7 +135,7 @@ class CartService {
         const Items = await cartService.listarCarrito();
 
         if(!Items)
-         return "No hay carritos"
+            return "No hay carritos"
  
         const indiceBuscado = Items.findIndex(c => c.usuario === usuario._id);
       

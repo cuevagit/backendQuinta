@@ -16,16 +16,16 @@ class ProductService {
 
     async listarProducto() {
         try {
-                const listadoProducts = await Products.listarProducto()
+            const listadoProducts = await Products.listarProducto()
                 
-                if(listadoProducts){
-                    const products = []
-                    listadoProducts.forEach(d => {
-                        products.push(d.datos())
-                    });
-                    return products
-                } else
-                    return null
+            if(listadoProducts){
+                const products = []
+                listadoProducts.forEach(d => {
+                products.push(d.datos())
+            });
+                return products
+            } else
+                return null
         } catch (error) {
             return error
         }

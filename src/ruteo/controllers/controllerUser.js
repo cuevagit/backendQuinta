@@ -1,5 +1,6 @@
 import loggerError from '../../negocio/utils/pinoError.js';
 import loggerWarn from '../../negocio/utils/pinoWarn.js';
+import loggerInfo from '../../negocio/utils/pinoInfo.js';
 import {userService} from '../../negocio/services/user.service.js'
 import {cartService} from '../../negocio/services/cart.service.js'
 import { createToken } from '../../negocio/utils/jwt.js';
@@ -33,6 +34,7 @@ async function controladorRegistro(req, res) {
 
   await cartService.grabarCarritoUsuario(carrito);
 
+  loggerInfo({"token": token})
   res.status(201).json(usuario)
 
  }

@@ -11,18 +11,18 @@ class ContainerUser{
     }
 
 
-        //USUARIO
-        async save(objeto){
+    //USUARIO
+    async save(objeto){
  
-            try {
-                await this.coleccion.insertOne(objeto)
-                return objeto
-            } 
-            catch (error){
-                return error
+        try {
+            await this.coleccion.insertOne(objeto)
+            return objeto
+        } 
+        catch (error){
+            return error
             } 
     
-          }
+    }
 
 
     async buscar_usuario(usuario){
@@ -34,6 +34,14 @@ class ContainerUser{
         }
    }
 
+   async buscar_usuario_id(usuario){
+        try {
+            const user = await this.coleccion.findOne({_id: usuario})
+            return user
+        } catch (error) {
+            return error
+        }
+    }
 
 }
 
