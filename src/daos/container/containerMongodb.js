@@ -109,11 +109,11 @@ class ContainerMongodb{
     }
 
     
-    //PRODUCTOS y CARRITO
+    //PRODUCTOS 
     async update(objeto){
 
         try {
-            await this.coleccion.updateMany({_id: objeto._id}, {$set: {"name": objeto.name, "description": objeto.description, "price": objeto.price, "image(url)": objeto.imageurl}})
+            await this.coleccion.updateMany({_id: objeto._id}, {$set: {"name": objeto.name, "description": objeto.description, "price": objeto.price, "image": objeto.image}})
             return objeto;
         }
         catch(error){
