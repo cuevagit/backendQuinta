@@ -25,6 +25,7 @@ class ContainerUser{
     }
 
 
+    //USUARIO
     async buscar_usuario(usuario){
         try {
             const user = await this.coleccion.findOne({email: usuario})
@@ -34,6 +35,8 @@ class ContainerUser{
         }
    }
 
+
+    //USUARIO
    async buscar_usuario_id(usuario){
         try {
             const user = await this.coleccion.findOne({_id: usuario})
@@ -44,5 +47,7 @@ class ContainerUser{
     }
 
 }
+
+
 
 export {ContainerUser};

@@ -7,6 +7,8 @@ import {productService} from '../../negocio/services/product.service.js'
 
 class CartService {
     
+    
+    //Agrega productos al carrito del usuario logueado
     async grabarCarrito(user, idProd) {
 
         const Items = await cartService.listarCarrito();
@@ -46,7 +48,7 @@ class CartService {
     }
 
    
-
+    //Graba el carrito del usuario que se registró
     async grabarCarritoUsuario(objeto) {
         try {
             const cart = new Carrito(objeto);
@@ -58,6 +60,7 @@ class CartService {
     }
 
 
+    //Lista todos los carritos (de todos los usuarios)
     async listarCarrito() {
 
         try {
@@ -77,6 +80,7 @@ class CartService {
     }
 
 
+    //Lista todos los productos del carrito del usuario logueado
     async listarCarritoUsuario(usuario) {
 
         const listadoCarts = await Cart.listarCarritoUsuario(usuario._id)
@@ -92,6 +96,7 @@ class CartService {
     }
 
 
+    //Elimina un producto dado del carrito del usuario logueado
     async eliminarProducto(user, idProd) {
 
         const Items = await cartService.listarCarrito();
@@ -129,7 +134,7 @@ class CartService {
     }     
                       
       
-
+    //Elimina todos los productos del carrito del usuario logueado
     async eliminarCarrito(usuario) {
  
         const Items = await cartService.listarCarrito();

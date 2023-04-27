@@ -9,6 +9,8 @@ import {EMAILADMIN} from '../../config/config.js'
 
 class OrderService {
 
+  
+    //Graba las Ordenes del Usuario logueado
     async grabarOrden(usuario) {
 
         const productsCart = await cartService.listarCarritoUsuario(usuario)
@@ -53,11 +55,11 @@ class OrderService {
              html = html + `<strong style="color: blue">Nombre: </strong>${order.prods[j].prod.name} <br> <strong style="color: blue"> Descripción: </strong> ${order.prods[j].prod.description} <br> <strong style="color: blue"> Precio: </strong>  ${order.prods[j].prod.price} <br> <strong style="color: blue"> Cantidad: </strong>  ${order.prods[j].cant}<br> <strong style="color: blue"></strong> <img width="70px" src=${order.prods[j].prod.image} alt="Foto" <br><br><br>`
             };
 
-            //Se notifica al Admin
-            await nodemailer("Mailer", EMAILADMIN, "nuevo venta, compra hecha por " + usuario.lastname + ", " + usuario.name + " - " + usuario.email , html, null)
-            const nrocomprobante = Math.floor(Math.random()*999999);
-            html = html + `<strong>El número de comprobante es: #${nrocomprobante}.</strong>`
-            await nodemailer("Mailer", usuario.email, "Pedido #" + nrocomprobante + " en Proceso" , html, null)
+           //Se notifica al Admin
+           await nodemailer("Mailer", EMAILADMIN, "nuevo venta, compra hecha por " + usuario.lastname + ", " + usuario.name + " - " + usuario.email , html, null)
+           const nrocomprobante = Math.floor(Math.random()*999999);
+           html = html + `<strong>El número de comprobante es: #${nrocomprobante}.</strong>`
+           await nodemailer("Mailer", usuario.email, "Pedido #" + nrocomprobante + " en Proceso" , html, null)
     
            //Se notifica al Usuario Comprador
            await nodemailer("Mailer", usuario.email, "nuevo pedido, " + usuario.lastname + ", " + usuario.name + " - " + usuario.email , html, null)
@@ -68,16 +70,18 @@ class OrderService {
 
     }
 
+
+    //Lista las ordenes del Usuario logueado
     async listarOrder(usuario) {
-                const listadoOrders = await Orders.listarOrder(usuario)
-                if(listadoOrders[0]){
-                    const orders = []
-                    listadoOrders.forEach(d => {
-                        orders.push(d.datos())
-                    });
-                    return orders
-                } else
-                    throw new Error (`No existen ordenes del usuario ${usuario.email}`)
+          const listadoOrders = await Orders.listarOrder(usuario)
+          if(listadoOrders[0]){
+            const orders = []
+            listadoOrders.forEach(d => {
+              orders.push(d.datos())
+            });
+              return orders
+          } else
+              throw new Error (`No existen ordenes del usuario ${usuario.email}`)
     }
 
 

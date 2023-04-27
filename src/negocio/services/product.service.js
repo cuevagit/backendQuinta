@@ -4,6 +4,8 @@ import { Products } from '../repository/product/index.js';
 
 class ProductService {
 
+
+    //Agrega un producto nuevo
     async grabarProducto(objeto) {
         try {
             const product = new Productos(objeto);
@@ -14,6 +16,8 @@ class ProductService {
         }
     }
 
+
+    //Lista los datos de todos los productos
     async listarProducto() {
         try {
             const listadoProducts = await Products.listarProducto()
@@ -32,6 +36,7 @@ class ProductService {
     }
 
 
+    //Actualiza los datos de un producto dado
     async actualizarProducto(objeto) {
         try {
             const product = new Productos(objeto);
@@ -43,6 +48,7 @@ class ProductService {
     }
     
 
+    //Elimina un producto dado
     async eliminarProducto(id) {
         try {
             const deleteProduct = await Products.eliminarProducto(id)
@@ -53,7 +59,7 @@ class ProductService {
     }
 
 
-
+    //Lista los datos de un producto dado
     async listarProductoPorId(id) {
         try {
             const producto = await Products.listarProductoPorId(id)

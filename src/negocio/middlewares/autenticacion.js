@@ -26,4 +26,4 @@ export function autenticacion(req, res, next) {
       loggerWarn(error) 
   }
       
-  }
+}

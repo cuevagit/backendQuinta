@@ -45,7 +45,7 @@ class ContainerMongodb{
     }
 
 
-
+    //PRODUCTOS
      async getById(id){
        
         try {
@@ -89,7 +89,7 @@ class ContainerMongodb{
     }
 
 
-    //PRODUCTOS y CARRITO
+    //PRODUCTOS 
     async deleteById(id){
         try {
             const objetoBorrado = await this.coleccion.find({_id: id}).toArray()
@@ -160,7 +160,7 @@ class ContainerMongodb{
     }
 
 
-      //Ordenes
+      //ORDENES
       async getByIdUserOrders(id){
        
         try {

@@ -7,6 +7,8 @@ import {EMAILADMIN} from '../../config/config.js'
 
 class UserService {
 
+    
+    //Da de alta un nuevo usuario
     async grabarUsuario(objeto) {
         try {
             objeto.password = createHash(objeto.password)
@@ -23,6 +25,7 @@ class UserService {
         }
     }
 
+
     //Busco el usuario por email, para cuando se registra un nuevo usuario asegurarme ya no exista
     async buscar_usuario(user) {
         try {
@@ -37,7 +40,8 @@ class UserService {
         }
     }
 
-    //Info usuario
+
+    //Muestra los datos del usuario logueado
     async usuarioInfo(user) {
            const usuarioBuscado = await User.usuarioInfo(user)
 
