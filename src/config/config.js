@@ -15,7 +15,6 @@ export const PERSISTENCIA=process.env.PERSISTENCIA
 export const SALTENV=process.env.SALTENV
 export const MODO_POR_DEFECTO=process.env.MODO_POR_DEFECTO
 export const PUERTO_POR_DEFECTO=process.env.PUERTO_POR_DEFECTO
-export const TIPO_USUARIO_POR_DEFECTO=process.env.TIPO_USUARIO_POR_DEFECTO
 export const SERVICEEMAIL=process.env.SERVICEEMAIL
 export const PORTEMAIL=process.env.PORTEMAIL
 export const EMAILADMIN=process.env.EMAILADMIN
