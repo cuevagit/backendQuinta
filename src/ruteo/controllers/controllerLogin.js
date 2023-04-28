@@ -25,7 +25,7 @@ async function controladorLoginp(req, res) {
       //Creo el Token y lo envio al header
       const token = createToken(usuario)
       res.header('authorization', token)
-      loggerInfo({"token": token})
+      //loggerInfo({"token": token})
       res.status(200).json({mensaje: usuario.email})
   } else {
     loggerError(mensaje)

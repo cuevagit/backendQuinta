@@ -34,7 +34,7 @@ async function controladorRegistro(req, res) {
 
   await cartService.grabarCarritoUsuario(carrito);
 
-  loggerInfo({"token": token})
+  //loggerInfo({"token": token})
   res.status(201).json(usuario)
 
  }
