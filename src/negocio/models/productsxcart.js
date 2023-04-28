@@ -19,14 +19,14 @@ class Carrito_prods{
 
            
 
-       datos() {
+    datos() {
         return new CartProdsDto({
             idProd: this.#idProd,  
             cant: this.#cant,  
         })
       }
 
-    }
+}
 
   
 

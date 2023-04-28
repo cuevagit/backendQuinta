@@ -30,7 +30,7 @@ servidor.use(express.static('public/img'))
 
 //multer
 multer_function()
-//
+
 
 //Si viene de una ruta no implementada
 servidor.all('*', (req, res) => {

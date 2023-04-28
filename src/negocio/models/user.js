@@ -35,7 +35,7 @@ class Usuario{
 
 
 
-      datos() {
+    datos() {
         return new UserDto({
             _id: this.#id,  
             email: this.#email,  
@@ -44,9 +44,9 @@ class Usuario{
             lastname: this.#lastname,  
             image: this.#image   
         })
-      }
-
     }
+
+}
 
 
  export default Usuario;

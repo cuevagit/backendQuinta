@@ -27,16 +27,16 @@ class Ordenes{
     get prods() { return this.#prods }
 
 
-       datos() {
+    datos() {
         return new OrderDto({
             _id: this.#id,  
             fecha: this.#fecha,  
             idCliente: this.#idCliente,  
             prods: this.#prods
         })
-      }
-
     }
+
+}
 
   
 

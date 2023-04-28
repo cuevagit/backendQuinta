@@ -24,15 +24,15 @@ class Carrito{
 
             
 
-       datos() {
+    datos() {
         return new CartDto({
             _id: this.#id,  
             usuario: this.#usuario,  
             productos: this.#productos
         })
-      }
-
     }
+
+}
 
   
 

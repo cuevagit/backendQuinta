@@ -13,10 +13,10 @@ export async function esAdmin(req, res, next){
         if(usuario.email === EMAILADMIN)         
           next()
         else
-          res.json({"mensaje": "El usuario no es Admin"})
+          res.status(401).json({"mensaje": "El usuario no es Admin"})
      } else {
         loggerWarn("No hay usuario logueado")
-        res.json({"mensaje": "No hay usuario logueado"})
+        res.status(401).json({"mensaje": "No hay usuario logueado"})
     }
   
 }

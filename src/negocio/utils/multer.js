@@ -7,7 +7,6 @@ export function multer_function(){
         cb(null, 'public/img')
       },
       filename: function (req, file, cb) {
-        //cb(null, `${Date.now()}-${file.originalname}`)
         cb(null, `${file.originalname}`)
       }
     })

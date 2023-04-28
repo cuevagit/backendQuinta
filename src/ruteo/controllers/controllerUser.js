@@ -23,7 +23,8 @@ async function controladorRegistro(req, res) {
   //Creo el Token y lo envio al header
   const token = createToken(usuario)
   res.header('authorization', token)
-
+  //loggerInfo({"token": token})
+  
   //Doy de alta un carrito para este usuario
   const productos = []
 
@@ -34,7 +35,6 @@ async function controladorRegistro(req, res) {
 
   await cartService.grabarCarritoUsuario(carrito);
 
-  //loggerInfo({"token": token})
   res.status(201).json(usuario)
 
  }

@@ -1,6 +1,4 @@
 import loggerError from '../../negocio/utils/pinoError.js';
-import loggerWarn from '../../negocio/utils/pinoWarn.js';
-import loggerInfo from '../../negocio/utils/pinoInfo.js';
 import {userService} from '../../negocio/services/user.service.js'
 import { createToken } from '../../negocio/utils/jwt.js';
 import { validatePassword } from '../../negocio/utils/bcrypt.js';

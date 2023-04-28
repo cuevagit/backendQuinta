@@ -30,7 +30,7 @@ class Productos{
 
 
 
-       datos() {
+    datos() {
         return new ProductDto({
             _id: this.#id,  
             name: this.#name,  
@@ -38,9 +38,9 @@ class Productos{
             price: this.#price,   
             image: this.#image   
         })
-      }
-
     }
+
+}
 
   
 
