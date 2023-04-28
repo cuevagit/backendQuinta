@@ -20,4 +20,3 @@ export const SERVICEEMAIL=process.env.SERVICEEMAIL
 export const PORTEMAIL=process.env.PORTEMAIL
 export const EMAILADMIN=process.env.EMAILADMIN
 export const PASSWORDADMIN=process.env.PASSWORDADMIN
-export const USUARIOADMIN=process.env.USUARIOADMIN
