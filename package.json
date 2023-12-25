@@ -38,6 +38,7 @@
     "nvm": "^0.0.4",
     "passport": "^0.6.0",
     "passport-local": "^1.0.0",
+    "pg": "^8.11.3",
     "pino": "^6.11.3",
     "pino-pretty": "^5.0.2",
     "polyfills": "^2.1.1",
